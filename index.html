@@ -1,198 +1,667 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Каталог гортензий</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Гортензии</title>
 
-<style>
-body {
-  margin:0;
-  font-family: Arial;
-  background:#f5f5f2;
-}
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
 
-.app {
-  max-width:420px;
-  margin:auto;
-  background:white;
-  min-height:100vh;
-}
+  <style>
+    :root {
+      --bg: #f3f2ee;
+      --white: #ffffff;
+      --text: #223128;
+      --muted: #6f7d73;
+      --muted-2: #8a978f;
+      --line: #e4e6df;
+      --green-dark: #173b2c;
+      --green-mid: #2e5c45;
+      --green-soft: #4b7d61;
+      --green-soft-2: #dfe9dd;
+      --chip: #edf1ea;
+      --chip-text: #506055;
+      --shadow: 0 10px 28px rgba(31, 38, 33, 0.08);
+      --shadow-hover: 0 18px 36px rgba(31, 38, 33, 0.12);
+    }
 
-/* ШАПКА */
-.topbar {
-  padding:12px;
-  border-bottom:1px solid #eee;
-  display:flex;
-  justify-content:space-between;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-.hidden { display:none; }
+    body {
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
 
-/* КАРТОЧКИ */
-.grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-  padding:12px;
-}
+    img {
+      display: block;
+      max-width: 100%;
+    }
 
-.card {
-  background:white;
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:0 2px 6px rgba(0,0,0,0.05);
-  cursor:pointer;
-}
+    .container {
+      width: min(1320px, calc(100% - 36px));
+      margin: 0 auto;
+    }
 
-.card img {
-  width:100%;
-  height:120px;
-  object-fit:cover;
-}
+    /* =========================
+         HEADER
+      ========================= */
+    .topbar {
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.06), transparent 18%),
+        radial-gradient(circle at 85% 30%, rgba(255,255,255,0.06), transparent 16%),
+        linear-gradient(135deg, #123726 0%, #21513a 52%, #44795b 100%);
+      box-shadow: 0 8px 24px rgba(18, 34, 24, 0.14);
+      padding: 14px 0;
+    }
 
-.card-body {
-  padding:10px;
-}
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
 
-.title {
-  font-size:14px;
-  font-weight:bold;
-}
+    .brand-title {
+      margin: 0 0 10px;
+      color: #fff;
+      font-size: clamp(28px, 3vw, 52px);
+      line-height: 0.95;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
 
-.sub {
-  font-size:12px;
-  color:#777;
-}
+    .header-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-/* ВНУТРЕННЯЯ */
-.hero img {
-  width:100%;
-  height:260px;
-  object-fit:cover;
-}
+    .header-tag {
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #fff;
+      font-size: 13px;
+      white-space: nowrap;
+    }
 
-.section {
-  padding:12px;
-}
+    .contact {
+      text-align: right;
+      color: #fff;
+      min-width: 280px;
+    }
 
-.button {
-  position:fixed;
-  bottom:0;
-  width:100%;
-  max-width:420px;
-  background:white;
-  padding:10px;
-  border-top:1px solid #eee;
-}
+    .contact-name {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
 
-.button button {
-  width:100%;
-  padding:14px;
-  background:#355543;
-  color:white;
-  border:none;
-  border-radius:10px;
-}
-</style>
+    .contact-phone {
+      display: inline-block;
+      font-size: clamp(24px, 2.6vw, 38px);
+      font-weight: 800;
+      line-height: 1;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: -0.04em;
+      margin-bottom: 10px;
+    }
 
-<script>
-function openCard() {
-  document.getElementById("main").classList.add("hidden");
-  document.getElementById("detail").classList.remove("hidden");
-}
+    .insta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.14);
+      padding: 7px 11px;
+      border-radius: 999px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
 
-function goBack() {
-  document.getElementById("main").classList.remove("hidden");
-  document.getElementById("detail").classList.add("hidden");
-}
-</script>
+    .insta-avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
 
+    /* =========================
+         HERO
+      ========================= */
+    .hero-wrap {
+      padding: 22px 0 18px;
+    }
+
+    .hero {
+      width: 100%;
+      background: rgba(255,255,255,0.84);
+      border-radius: 30px;
+      padding: 28px 28px 24px;
+      box-shadow: 0 12px 34px rgba(31, 38, 33, 0.05);
+    }
+
+    .hero-title {
+      margin: 0 0 10px;
+      font-family: "DM Serif Display", serif;
+      font-size: clamp(44px, 5vw, 72px);
+      line-height: 0.95;
+      font-weight: 400;
+      color: #213127;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-subtext {
+      margin: 0 0 18px;
+      font-size: 17px;
+      color: var(--muted);
+    }
+
+    .search-row {
+      display: grid;
+      grid-template-columns: 1fr 170px;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .searchbox input {
+      width: 100%;
+      height: 62px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: #fff;
+      padding: 0 18px;
+      font-size: 18px;
+      color: var(--text);
+      outline: none;
+    }
+
+    .find-btn {
+      border: none;
+      border-radius: 18px;
+      background: var(--green-soft);
+      color: #fff;
+      font-size: 18px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .filter-chip {
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: var(--chip);
+      color: var(--chip-text);
+      font-size: 15px;
+      border: 1px solid #e8ece6;
+    }
+
+    .filter-chip.active {
+      background: #4b7d61;
+      color: #fff;
+      border-color: #4b7d61;
+    }
+
+    /* =========================
+         CARDS
+      ========================= */
+    .catalog-section {
+      padding: 12px 0 42px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      align-items: start;
+    }
+
+    .card {
+      display: block;
+      background: rgba(255,255,255,0.9);
+      border-radius: 26px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 12px 34px rgba(31, 38, 33, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 36px rgba(31, 38, 33, 0.12);
+    }
+
+    .card__media {
+      position: relative;
+      aspect-ratio: 4 / 4.2;
+      overflow: hidden;
+      background: #edf1ea;
+    }
+
+    .card__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover .card__media img {
+      transform: scale(1.05);
+    }
+
+    .badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 6px 14px rgba(31, 38, 33, 0.06);
+      color: #435b4d;
+    }
+
+    .badge--new {
+      color: #3f5d4a;
+    }
+
+    .badge--draft {
+      color: #6f7d73;
+    }
+
+    .card__body {
+      padding: 16px;
+    }
+
+    .card__kicker {
+      font-size: 11px;
+      color: #7e8c82;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .card__title {
+      font-size: 22px;
+      line-height: 1.15;
+      font-weight: 700;
+      margin: 6px 0 0;
+      color: #223128;
+    }
+
+    .card__latin {
+      font-size: 14px;
+      color: #728077;
+      margin-top: 4px;
+    }
+
+    .card__note {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-top: 10px;
+      color: #566559;
+      min-height: 42px;
+    }
+
+    /* Иконки-критерии */
+    .card__criteria {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .icon-badge {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: #eef2eb;
+      border: 1px solid #e5ebe3;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .icon-badge svg {
+      width: 17px;
+      height: 17px;
+      stroke: #4d6a58;
+      stroke-width: 1.8;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .icon-badge--soft svg {
+      stroke: #73867a;
+    }
+
+    .card__row {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .card__link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border-radius: 999px;
+      background: var(--green-soft-2);
+      color: #3f5d4a;
+      font-weight: 700;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    /* =========================
+         MOBILE
+      ========================= */
+    @media (max-width: 1100px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        width: min(100% - 18px, 1320px);
+      }
+
+      .topbar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .contact {
+        text-align: left;
+        min-width: 0;
+      }
+
+      .hero {
+        padding: 22px 16px 18px;
+        border-radius: 24px;
+      }
+
+      .hero-title {
+        font-size: 44px;
+      }
+
+      .search-row {
+        grid-template-columns: 1fr;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="app">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div>
+        <h1 class="brand-title">Мои 12 соток</h1>
+        <div class="header-tags">
+          <span class="header-tag">плодово-ягодные</span>
+          <span class="header-tag">декоративные кустарники</span>
+          <span class="header-tag">хвойные</span>
+        </div>
+      </div>
 
-<!-- ГЛАВНАЯ -->
-<div id="main">
+      <div class="contact">
+        <div class="contact-name">Альбина</div>
+        <a href="tel:+79644462081" class="contact-phone">+7 964 446 20 81</a>
+        <br>
+        <a href="#" class="insta-btn">
+          <img class="insta-avatar" src="1.jpg" alt="@primsad">
+          <span>@primsad</span>
+        </a>
+      </div>
+    </div>
+  </header>
 
-<div class="topbar">
-  <div>
-    <b>Мои 12 соток</b><br>
-    @primsad
-  </div>
-  <div>
-    Альбина<br>
-    <b>+7 964 446 20 81</b>
-  </div>
-</div>
+  <main>
+    <section class="hero-wrap">
+      <div class="container">
+        <div class="hero">
+          <h2 class="hero-title">Гортензии</h2>
+          <p class="hero-subtext">Подберите сорт для своего сада</p>
 
-<div class="grid">
+          <div class="search-row">
+            <div class="searchbox">
+              <input type="text" placeholder="Найти сорт">
+            </div>
+            <button class="find-btn">НАЙТИ</button>
+          </div>
 
-<!-- ЛАЙМЛАЙТ -->
-<div class="card" onclick="openCard()">
-  <img src="photo-1.jpg">
-  <div class="card-body">
-    <div class="title">Гортензия Лаймлайт</div>
-    <div class="sub">Limelight</div>
-  </div>
-</div>
+          <div class="filters">
+            <div class="filter-chip active">Все</div>
+            <div class="filter-chip">Метельчатые</div>
+            <div class="filter-chip">Светлые</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- ЗАГЛУШКИ -->
-<div class="card">
-  <img src="https://picsum.photos/200/200">
-  <div class="card-body">
-    <div class="title">Bobo</div>
-    <div class="sub">Скоро</div>
-  </div>
-</div>
+    <section class="catalog-section">
+      <div class="container">
+        <div class="grid">
 
-<div class="card">
-  <img src="https://picsum.photos/201/200">
-  <div class="card-body">
-    <div class="title">Vanilla Fraise</div>
-    <div class="sub">Скоро</div>
-  </div>
-</div>
+          <!-- 1 -->
+          <a class="card" href="limelight.html">
+            <div class="card__media">
+              <span class="badge badge--new">Рекомендуем</span>
+              <img src="1.jpg" alt="Гортензия Лаймлайт">
+            </div>
 
-</div>
-</div>
+            <div class="card__body">
+              <div class="card__kicker">гортензия метельчатая</div>
 
-<!-- СТРАНИЦА СОРТА -->
-<div id="detail" class="hidden">
+              <h3 class="card__title">Гортензия Лаймлайт</h3>
+              <div class="card__latin">Limelight</div>
 
-<div class="topbar">
-  <div onclick="goBack()">← Назад</div>
-</div>
+              <div class="card__criteria">
+                <!-- солнце -->
+                <span class="icon-badge" title="Солнце">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="3.6"></circle>
+                    <path d="M12 2.5v2.7M12 18.8v2.7M21.5 12h-2.7M5.2 12H2.5M18.7 5.3l-1.9 1.9M7.2 16.8l-1.9 1.9M18.7 18.7l-1.9-1.9M7.2 7.2 5.3 5.3"></path>
+                  </svg>
+                </span>
 
-<div class="hero">
-  <img src="photo-1.jpg">
-</div>
+                <!-- морозостойкая -->
+                <span class="icon-badge" title="Морозостойкая">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2.5v19"></path>
+                    <path d="M12 6.5 8.8 4.8"></path>
+                    <path d="M12 6.5 15.2 4.8"></path>
+                    <path d="M12 17.5 8.8 19.2"></path>
+                    <path d="M12 17.5 15.2 19.2"></path>
+                    <path d="M4.5 8l15 8"></path>
+                    <path d="M7.3 9.5 7 5.9"></path>
+                    <path d="M7.3 9.5 4.1 11.2"></path>
+                    <path d="M16.7 14.5 20 12.8"></path>
+                    <path d="M16.7 14.5 17 18.1"></path>
+                    <path d="M19.5 8 4.5 16"></path>
+                    <path d="M16.7 9.5 20 11.2"></path>
+                    <path d="M16.7 9.5 17 5.9"></path>
+                    <path d="M7.3 14.5 4 12.8"></path>
+                    <path d="M7.3 14.5 7 18.1"></path>
+                  </svg>
+                </span>
 
-<div class="section">
-  <h2>Гортензия Лаймлайт</h2>
-  <p>Limelight</p>
-  <p>Светлая лаймовая гортензия</p>
-</div>
+                <!-- многолетняя -->
+                <span class="icon-badge" title="Многолетняя">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 14c0-4.8 4.5-7.7 10-8-0.2 5.6-3.2 10-8 10-1.2 0-2.2-0.3-3-1z"></path>
+                    <path d="M8 15c1.5-2.2 4.4-4.8 8.8-7"></path>
+                  </svg>
+                </span>
 
-<div class="section">
-  <h3>Куст</h3>
-  <img src="photo-2.jpg">
-</div>
+                <!-- высота -->
+                <span class="icon-badge" title="Высота">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 4v16"></path>
+                    <path d="M8.5 7.5 12 4l3.5 3.5"></path>
+                    <path d="M8.5 16.5 12 20l3.5-3.5"></path>
+                  </svg>
+                </span>
 
-<div class="section">
-  <h3>Цветок</h3>
-  <img src="photo-3.jpg">
-</div>
+                <!-- полив -->
+                <span class="icon-badge" title="Полив">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 3.5c0 0-5.5 6.2-5.5 10a5.5 5.5 0 0 0 11 0c0-3.8-5.5-10-5.5-10z"></path>
+                  </svg>
+                </span>
+              </div>
 
-</div>
+              <div class="card__row">
+                <span class="card__link">Смотреть</span>
+              </div>
+            </div>
+          </a>
 
-</div>
+          <!-- 2 -->
+          <a class="card" href="#">
+            <div class="card__media">
+              <span class="badge badge--draft">В разработке</span>
+              <img src="2.jpg" alt="Гортензия Ванилла Фрейз">
+            </div>
 
-<div class="button">
-<button>Написать продавцу</button>
-</div>
+            <div class="card__body">
+              <div class="card__kicker">гортензия метельчатая</div>
+
+              <h3 class="card__title">Гортензия Ванилла Фрейз</h3>
+              <div class="card__latin">Vanille Fraise</div>
+
+              <div class="card__note">
+                Скоро здесь появится подробная карточка сорта с основными характеристиками.
+              </div>
+
+              <div class="card__criteria">
+                <span class="icon-badge icon-badge--soft" title="Солнце">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="3.6"></circle>
+                    <path d="M12 2.5v2.7M12 18.8v2.7M21.5 12h-2.7M5.2 12H2.5M18.7 5.3l-1.9 1.9M7.2 16.8l-1.9 1.9M18.7 18.7l-1.9-1.9M7.2 7.2 5.3 5.3"></path>
+                  </svg>
+                </span>
+
+                <span class="icon-badge icon-badge--soft" title="Морозостойкая">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2.5v19"></path>
+                    <path d="M12 6.5 8.8 4.8"></path>
+                    <path d="M12 6.5 15.2 4.8"></path>
+                    <path d="M12 17.5 8.8 19.2"></path>
+                    <path d="M12 17.5 15.2 19.2"></path>
+                    <path d="M4.5 8l15 8"></path>
+                    <path d="M19.5 8 4.5 16"></path>
+                  </svg>
+                </span>
+
+                <span class="icon-badge icon-badge--soft" title="Многолетняя">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 14c0-4.8 4.5-7.7 10-8-0.2 5.6-3.2 10-8 10-1.2 0-2.2-0.3-3-1z"></path>
+                    <path d="M8 15c1.5-2.2 4.4-4.8 8.8-7"></path>
+                  </svg>
+                </span>
+
+                <span class="icon-badge icon-badge--soft" title="Высота">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 4v16"></path>
+                    <path d="M8.5 7.5 12 4l3.5 3.5"></path>
+                    <path d="M8.5 16.5 12 20l3.5-3.5"></path>
+                  </svg>
+                </span>
+              </div>
+
+              <div class="card__row">
+                <span class="card__link">Скоро</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- 3 -->
+          <a class="card" href="#">
+            <div class="card__media">
+              <span class="badge badge--draft">В разработке</span>
+              <img src="3.jpg" alt="Гортензия Полар Бир">
+            </div>
+
+            <div class="card__body">
+              <div class="card__kicker">гортензия метельчатая</div>
+
+              <h3 class="card__title">Гортензия Полар Бир</h3>
+              <div class="card__latin">Polar Bear</div>
+
+              <div class="card__note">
+                Скоро здесь появится подробная карточка сорта с основными характеристиками.
+              </div>
+
+              <div class="card__criteria">
+                <span class="icon-badge icon-badge--soft" title="Солнце">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="3.6"></circle>
+                    <path d="M12 2.5v2.7M12 18.8v2.7M21.5 12h-2.7M5.2 12H2.5M18.7 5.3l-1.9 1.9M7.2 16.8l-1.9 1.9M18.7 18.7l-1.9-1.9M7.2 7.2 5.3 5.3"></path>
+                  </svg>
+                </span>
+
+                <span class="icon-badge icon-badge--soft" title="Морозостойкая">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2.5v19"></path>
+                    <path d="M12 6.5 8.8 4.8"></path>
+                    <path d="M12 6.5 15.2 4.8"></path>
+                    <path d="M12 17.5 8.8 19.2"></path>
+                    <path d="M12 17.5 15.2 19.2"></path>
+                    <path d="M4.5 8l15 8"></path>
+                    <path d="M19.5 8 4.5 16"></path>
+                  </svg>
+                </span>
+
+                <span class="icon-badge icon-badge--soft" title="Многолетняя">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 14c0-4.8 4.5-7.7 10-8-0.2 5.6-3.2 10-8 10-1.2 0-2.2-0.3-3-1z"></path>
+                    <path d="M8 15c1.5-2.2 4.4-4.8 8.8-7"></path>
+                  </svg>
+                </span>
+
+                <span class="icon-badge icon-badge--soft" title="Полив">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 3.5c0 0-5.5 6.2-5.5 10a5.5 5.5 0 0 0 11 0c0-3.8-5.5-10-5.5-10z"></path>
+                  </svg>
+                </span>
+              </div>
+
+              <div class="card__row">
+                <span class="card__link">Скоро</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+  </main>
 
 </body>
 </html>

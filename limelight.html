@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Гортензия Лаймлайт — Мои 12 соток</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    :root {
+      --bg: #f4f6f1;
+      --card: #ffffff;
+      --text: #24342b;
+      --muted: #6c7d72;
+      --line: #e7ebe4;
+      --soft: #f7f7f3;
+      --green: #355543;
+      --green-2: #70826f;
+      --chip: #eef4ec;
+      --shadow: 0 10px 28px rgba(0,0,0,0.06);
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background:
+        radial-gradient(ellipse 85% 65% at 8% 8%, rgba(175, 109, 255, 0.32), transparent 60%),
+        radial-gradient(ellipse 75% 60% at 75% 35%, rgba(255, 235, 170, 0.42), transparent 62%),
+        radial-gradient(ellipse 70% 60% at 15% 80%, rgba(255, 100, 180, 0.22), transparent 62%),
+        radial-gradient(ellipse 70% 60% at 92% 92%, rgba(120, 190, 255, 0.3), transparent 62%),
+        linear-gradient(180deg, #f7eaff 0%, #fde2ea 100%);
+      background-attachment: fixed;
+      color: var(--text);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .site-header-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand-block {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #edf5ea, #dfead9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .brand-title {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.05;
+      font-weight: 700;
+    }
+
+    .brand-account {
+      appearance: none;
+      margin-top: 8px;
+      padding: 4px 14px 4px 4px;
+      border: 1px solid rgba(53, 85, 67, 0.12);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.78);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.05);
+      backdrop-filter: blur(10px);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--green);
+      font: inherit;
+      cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+
+    .brand-account:hover {
+      transform: translateY(-1px);
+      background: rgba(255,255,255,0.92);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+    }
+
+    .brand-account:focus-visible {
+      outline: 2px solid rgba(53, 85, 67, 0.28);
+      outline-offset: 3px;
+    }
+
+    .brand-account-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: #eef4ec;
+      box-shadow: inset 0 0 0 1px rgba(53, 85, 67, 0.12);
+    }
+
+    .brand-account-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .brand-account-meta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      line-height: 1.05;
+    }
+
+    .brand-account-label {
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .brand-account-handle {
+      margin-top: 3px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .brand-tags {
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .brand-chip {
+      font-size: 12px;
+      color: #4f6457;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 9px;
+      line-height: 1;
+    }
+
+    .contact-block {
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .contact-role {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .contact-name {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .contact-phone {
+      display: inline-block;
+      margin-top: 4px;
+      text-decoration: none;
+      color: var(--green);
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .contact-note {
+      margin-top: 6px;
+      font-size: 12px;
+      color: #7a897f;
+    }
+
+    .page {
+      min-height: 100vh;
+      padding: 24px 16px 40px;
+    }
+
+    .app-shell {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .app {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.82);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(231,235,228,0.9);
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 16px 44px rgba(0,0,0,0.08);
+    }
+
+    .section {
+      padding: 22px;
+    }
+
+    .back-link {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--green);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .narrow-banner {
+      margin-top: 8px;
+      border-radius: 26px;
+      overflow: hidden;
+      height: 180px;
+      box-shadow: var(--shadow);
+    }
+
+    .narrow-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .title-block h1 {
+      margin: 0;
+      font-size: 42px;
+      line-height: 1.05;
+    }
+
+    .latin {
+      margin-top: 8px;
+      font-size: 20px;
+      color: var(--muted);
+    }
+
+    .lead {
+      margin-top: 14px;
+      font-size: 18px;
+      line-height: 1.5;
+      color: #50655a;
+      max-width: 760px;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--chip);
+      color: #3b5b49;
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    .block-title {
+      margin: 0 0 14px;
+      font-size: 32px;
+      line-height: 1.1;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+    }
+
+    .gallery-card {
+      background: var(--card);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid #edf0eb;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-card .caption {
+      padding: 12px 14px 14px;
+      font-size: 14px;
+      line-height: 1.45;
+      color: #5d7064;
+    }
+
+    .months {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .month-card {
+      background: var(--soft);
+      border: 1px dashed #d4dbd3;
+      border-radius: 20px;
+      padding: 16px;
+    }
+
+    .month-card h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      color: #30483a;
+    }
+
+    .month-card p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.45;
+      color: #6b7d71;
+    }
+
+    .spec-box {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 18px 20px;
+    }
+
+    .spec-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 24px;
+    }
+
+    .spec-item {
+      font-size: 18px;
+      line-height: 1.5;
+      color: #31473a;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .why-card {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 18px;
+      font-size: 18px;
+      line-height: 1.55;
+      color: #31473a;
+    }
+
+    .cta-wrap {
+      padding: 0 22px 24px;
+    }
+
+    .cta-button {
+      display: block;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      background: var(--green);
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 700;
+      padding: 18px;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    @media (max-width: 980px) {
+      .title-block h1 {
+        font-size: 34px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .months {
+        grid-template-columns: 1fr;
+      }
+
+      .spec-list {
+        grid-template-columns: 1fr;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .site-header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 14px;
+      }
+
+      .brand-title { font-size: 18px; }
+      .brand-account {
+        padding-right: 12px;
+      }
+      .brand-account-avatar {
+        width: 30px;
+        height: 30px;
+      }
+      .brand-account-label { font-size: 9px; }
+      .brand-account-handle { font-size: 13px; }
+      .contact-block { text-align: left; }
+      .contact-name { font-size: 16px; }
+      .contact-phone { font-size: 18px; }
+      .brand-logo {
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+      }
+
+      .page { padding: 0; }
+
+      .app {
+        max-width: 100%;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+      }
+
+      .section {
+        padding: 18px 16px;
+      }
+
+      .narrow-banner {
+        height: 110px;
+        border-radius: 20px;
+      }
+
+      .title-block h1 {
+        font-size: 28px;
+      }
+
+      .latin {
+        font-size: 17px;
+      }
+
+      .lead {
+        font-size: 16px;
+      }
+
+      .block-title {
+        font-size: 24px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .gallery-card img {
+        height: 130px;
+      }
+
+      .gallery-card .caption {
+        font-size: 13px;
+      }
+
+      .month-card h3 {
+        font-size: 18px;
+      }
+
+      .month-card p,
+      .spec-item,
+      .why-card {
+        font-size: 15px;
+      }
+
+      .cta-wrap {
+        padding: 0 16px 22px;
+      }
+
+      .cta-button {
+        font-size: 17px;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .brand-tags {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="site-header">
+    <div class="site-header-inner">
+      <div class="brand-block">
+        <div class="brand-logo">🌿</div>
+        <div class="brand-text">
+          <h1 class="brand-title">Мои 12 соток</h1>
+          <button class="brand-account" type="button" aria-label="Аккаунт Instagram primsad">
+            <span class="brand-account-avatar" aria-hidden="true">
+              <img src="1.jpg" alt="" />
+            </span>
+            <span class="brand-account-meta">
+              <span class="brand-account-label">Instagram</span>
+              <span class="brand-account-handle">@primsad</span>
+            </span>
+          </button>
+          <div class="brand-tags">
+            <div class="brand-chip">плодово-ягодные кусты и деревья</div>
+            <div class="brand-chip">декоративные кустарники</div>
+            <div class="brand-chip">хвойные растения</div>
+            <div class="brand-chip">овощная рассада</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-block">
+        <div class="contact-role">Консультант</div>
+        <div class="contact-name">Альбина</div>
+        <a class="contact-phone" href="tel:+79644462081">+7 964 446 20 81</a>
+        <div class="contact-note">Отправка / доставка в регионы России</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="app-shell">
+      <div class="app">
+
+        <div class="section">
+          <a class="back-link" href="index.html">← Назад в каталог</a>
+
+          <div class="narrow-banner">
+            <img src="3.jpg" alt="Гортензия Лаймлайт" />
+          </div>
+        </div>
+
+        <div class="section title-block">
+          <h1>Гортензия Лаймлайт</h1>
+          <div class="latin">Hydrangea paniculata Limelight</div>
+          <div class="lead">
+            Светлая лаймовая метельчатая гортензия для эффектного, свежего и благородного сада. Подходит для красивых ландшафтных композиций и хорошо смотрится как у дома, так и в групповых посадках.
+          </div>
+          <div class="tag">Метельчатая гортензия</div>
+        </div>
+
+        <div class="section">
+          <h2 class="block-title">Как выглядит</h2>
+          <div class="gallery">
+            <div class="gallery-card">
+              <img src="1.jpg" alt="Соцветия Лаймлайт" />
+              <div class="caption">Крупный план соцветий. Светлый оттенок выглядит свежо и благородно.</div>
+            </div>
+
+            <div class="gallery-card">
+              <img src="2.jpg" alt="Куст Лаймлайт" />
+              <div class="caption">Взрослый куст на участке. Объёмный, пышный и хорошо держит форму.</div>
+            </div>
+
+            <div class="gallery-card">
+              <img src="3.jpg" alt="Лаймлайт в ландшафте" />
+              <div class="caption">Пример использования в ландшафте — у дома, рядом с дорожками и зонами отдыха.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="block-title">Как выглядит по месяцам</h2>
+          <div class="months">
+            <div class="month-card">
+              <h3>Июнь</h3>
+              <p>Сюда позже можно добавить фото начала цветения для наглядного сравнения.</p>
+            </div>
+            <div class="month-card">
+              <h3>Июль</h3>
+              <p>Сюда позже можно добавить фото активного цветения, когда куст набирает максимальную декоративность.</p>
+            </div>
+            <div class="month-card">
+              <h3>Сентябрь</h3>
+              <p>Сюда позже можно добавить фото позднего сезона, чтобы показать изменение оттенка.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="block-title">Параметры</h2>
+          <div class="spec-box">
+            <div class="spec-list">
+              <div class="spec-item">🌿 Тип: метельчатая</div>
+              <div class="spec-item">☀️ Свет: солнце / полутень</div>
+              <div class="spec-item">💧 Полив: умеренный</div>
+              <div class="spec-item">🌱 Почва: слабокислая</div>
+              <div class="spec-item">📏 Высота: до 2 м</div>
+              <div class="spec-item">🌸 Цветение: июль — сентябрь</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="block-title">Почему выбирают</h2>
+          <div class="why-grid">
+            <div class="why-card">
+              ✔ очень неприхотливая<br>
+              ✔ подходит новичкам<br>
+              ✔ хорошо смотрится у дома
+            </div>
+            <div class="why-card">
+              ✔ красиво меняет оттенок<br>
+              ✔ эффектно выглядит в ландшафте<br>
+              ✔ подходит для групповых посадок
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-wrap">
+          <a class="cta-button" href="tel:+79644462081">Позвонить Альбине</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
