@@ -3,17 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Гортензии</title>
-
+  <title>Гортензии — Мои 12 соток</title>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
-
   <style>
     :root {
       --bg: #f3f2ee;
       --white: #ffffff;
       --text: #223128;
       --muted: #6f7d73;
-      --muted-2: #8a978f;
       --line: #e4e6df;
       --green-dark: #173b2c;
       --green-mid: #2e5c45;
@@ -21,647 +18,378 @@
       --green-soft-2: #dfe9dd;
       --chip: #edf1ea;
       --chip-text: #506055;
-      --shadow: 0 10px 28px rgba(31, 38, 33, 0.08);
-      --shadow-hover: 0 18px 36px rgba(31, 38, 33, 0.12);
+      --header-height: 70px;
     }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Manrope", sans-serif; background: var(--bg); color: var(--text); }
+    img { display: block; max-width: 100%; }
+    .container { width: min(1320px, calc(100% - 36px)); margin: 0 auto; }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Manrope", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    .container {
-      width: min(1320px, calc(100% - 36px));
-      margin: 0 auto;
-    }
-
-    /* =========================
-         HEADER
-      ========================= */
+    /* ========================= STICKY HEADER ========================= */
     .topbar {
-      background:
-        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.06), transparent 18%),
-        radial-gradient(circle at 85% 30%, rgba(255,255,255,0.06), transparent 16%),
-        linear-gradient(135deg, #123726 0%, #21513a 52%, #44795b 100%);
-      box-shadow: 0 8px 24px rgba(18, 34, 24, 0.14);
-      padding: 14px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: linear-gradient(135deg, #123726 0%, #21513a 52%, #44795b 100%);
+      box-shadow: 0 4px 20px rgba(18,34,24,0.18);
+      padding: 0;
     }
-
     .topbar-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 24px;
+      height: var(--header-height);
     }
-
     .brand-title {
-      margin: 0 0 10px;
+      margin: 0;
       color: #fff;
-      font-size: clamp(28px, 3vw, 52px);
-      line-height: 0.95;
+      font-size: clamp(20px, 2.2vw, 32px);
+      line-height: 1;
       font-weight: 800;
       letter-spacing: -0.04em;
+      white-space: nowrap;
     }
-
     .header-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 8px;
+      margin-top: 6px;
     }
-
     .header-tag {
-      padding: 8px 14px;
+      padding: 5px 11px;
       border-radius: 999px;
       background: rgba(255,255,255,0.12);
       border: 1px solid rgba(255,255,255,0.08);
-      color: #fff;
-      font-size: 13px;
+      color: rgba(255,255,255,0.85);
+      font-size: 12px;
       white-space: nowrap;
     }
-
     .contact {
-      text-align: right;
+      display: flex;
+      align-items: center;
+      gap: 16px;
       color: #fff;
-      min-width: 280px;
+      flex-shrink: 0;
     }
-
-    .contact-name {
-      font-size: 16px;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
     .contact-phone {
-      display: inline-block;
-      font-size: clamp(24px, 2.6vw, 38px);
+      font-size: clamp(18px, 1.8vw, 26px);
       font-weight: 800;
-      line-height: 1;
       color: #fff;
       text-decoration: none;
-      letter-spacing: -0.04em;
-      margin-bottom: 10px;
+      letter-spacing: -0.03em;
+      white-space: nowrap;
     }
-
     .insta-btn {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
       background: rgba(255,255,255,0.14);
-      padding: 7px 11px;
+      padding: 6px 12px 6px 6px;
       border-radius: 999px;
       text-decoration: none;
       color: #fff;
       font-weight: 700;
-      font-size: 14px;
-      border: 1px solid rgba(255,255,255,0.08);
+      font-size: 13px;
+      border: 1px solid rgba(255,255,255,0.12);
+      white-space: nowrap;
     }
-
     .insta-avatar {
-      width: 30px;
-      height: 30px;
+      width: 28px;
+      height: 28px;
       border-radius: 50%;
       object-fit: cover;
+      background: rgba(255,255,255,0.2);
     }
 
-    /* =========================
-         HERO
-      ========================= */
-    .hero-wrap {
-      padding: 22px 0 18px;
-    }
-
+    /* ========================= HERO ========================= */
+    .hero-wrap { padding: 22px 0 18px; }
     .hero {
       width: 100%;
       background: rgba(255,255,255,0.84);
       border-radius: 30px;
       padding: 28px 28px 24px;
-      box-shadow: 0 12px 34px rgba(31, 38, 33, 0.05);
+      box-shadow: 0 12px 34px rgba(31,38,33,0.05);
     }
-
     .hero-title {
       margin: 0 0 10px;
       font-family: "DM Serif Display", serif;
-      font-size: clamp(44px, 5vw, 72px);
+      font-size: clamp(44px,5vw,72px);
       line-height: 0.95;
       font-weight: 400;
       color: #213127;
       letter-spacing: -0.03em;
     }
-
-    .hero-subtext {
-      margin: 0 0 18px;
-      font-size: 17px;
-      color: var(--muted);
-    }
-
-    .search-row {
-      display: grid;
-      grid-template-columns: 1fr 170px;
-      gap: 12px;
-      margin-bottom: 14px;
-    }
-
+    .hero-subtext { margin: 0 0 18px; font-size: 17px; color: var(--muted); }
+    .search-row { display: grid; grid-template-columns: 1fr 170px; gap: 12px; margin-bottom: 14px; }
     .searchbox input {
-      width: 100%;
-      height: 62px;
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      background: #fff;
-      padding: 0 18px;
-      font-size: 18px;
-      color: var(--text);
-      outline: none;
+      width: 100%; height: 62px; border-radius: 18px;
+      border: 1px solid var(--line); background: #fff;
+      padding: 0 18px; font-size: 18px;
+      font-family: "Manrope", sans-serif; color: var(--text); outline: none;
     }
-
     .find-btn {
-      border: none;
-      border-radius: 18px;
-      background: var(--green-soft);
-      color: #fff;
-      font-size: 18px;
-      font-weight: 800;
-      cursor: pointer;
+      border: none; border-radius: 18px;
+      background: var(--green-soft); color: #fff;
+      font-size: 18px; font-weight: 800;
+      font-family: "Manrope", sans-serif; cursor: pointer;
     }
-
-    .filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
+    .filters { display: flex; flex-wrap: wrap; gap: 10px; }
     .filter-chip {
-      padding: 10px 16px;
-      border-radius: 999px;
-      background: var(--chip);
-      color: var(--chip-text);
-      font-size: 15px;
-      border: 1px solid #e8ece6;
+      padding: 10px 16px; border-radius: 999px;
+      background: var(--chip); color: var(--chip-text);
+      font-size: 15px; border: 1px solid #e8ece6;
+      cursor: pointer; font-family: "Manrope", sans-serif;
+      transition: background 0.15s, color 0.15s;
     }
+    .filter-chip.active { background: #4b7d61; color: #fff; border-color: #4b7d61; }
 
-    .filter-chip.active {
-      background: #4b7d61;
-      color: #fff;
-      border-color: #4b7d61;
-    }
+    /* ========================= GRID ========================= */
+    .catalog-section { padding: 12px 0 42px; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; align-items: start; }
 
-    /* =========================
-         CARDS
-      ========================= */
-    .catalog-section {
-      padding: 12px 0 42px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      align-items: start;
-    }
-
+    /* ========================= CARD ========================= */
     .card {
-      display: block;
-      background: rgba(255,255,255,0.9);
-      border-radius: 26px;
-      overflow: hidden;
-      text-decoration: none;
-      color: inherit;
-      box-shadow: 0 12px 34px rgba(31, 38, 33, 0.08);
+      display: block; background: rgba(255,255,255,0.9);
+      border-radius: 26px; overflow: hidden;
+      text-decoration: none; color: inherit;
+      box-shadow: 0 12px 34px rgba(31,38,33,0.08);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 18px 36px rgba(31,38,33,0.12); }
+    .card.hidden { display: none; }
 
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 18px 36px rgba(31, 38, 33, 0.12);
-    }
+    .card__media { position: relative; aspect-ratio: 4/4.2; overflow: hidden; background: #edf1ea; }
+    .card__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+    .card:hover .card__media img { transform: scale(1.05); }
 
-    .card__media {
-      position: relative;
-      aspect-ratio: 4 / 4.2;
-      overflow: hidden;
-      background: #edf1ea;
+    .card__media-placeholder {
+      display: none; position: absolute; inset: 0;
+      flex-direction: column; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, #e8f0e5 0%, #d4e4d0 100%);
+      color: #7a9b83; gap: 10px;
     }
-
-    .card__media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-    }
-
-    .card:hover .card__media img {
-      transform: scale(1.05);
-    }
+    .card__media-placeholder svg { width: 48px; height: 48px; stroke: #7a9b83; stroke-width: 1.2; fill: none; stroke-linecap: round; stroke-linejoin: round; opacity: 0.7; }
+    .card__media-placeholder span { font-size: 13px; color: #8aab91; }
 
     .badge {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      padding: 7px 11px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 600;
+      position: absolute; top: 12px; left: 12px;
+      padding: 7px 11px; border-radius: 999px;
+      font-size: 12px; font-weight: 600;
       background: rgba(255,255,255,0.88);
       backdrop-filter: blur(10px);
-      box-shadow: 0 6px 14px rgba(31, 38, 33, 0.06);
-      color: #435b4d;
+      box-shadow: 0 6px 14px rgba(31,38,33,0.06);
+    }
+    .badge--new { color: #3f5d4a; }
+    .badge--risky { color: #a05c2a; background: rgba(255,240,220,0.92); }
+    .badge--size {
+      position: absolute; top: 12px; right: 12px;
+      padding: 6px 10px; border-radius: 999px;
+      font-size: 12px; font-weight: 700;
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(10px); color: #506055;
     }
 
-    .badge--new {
-      color: #3f5d4a;
-    }
+    .card__body { padding: 16px; }
+    .card__kicker { font-size: 11px; color: #7e8c82; text-transform: uppercase; letter-spacing: 0.08em; }
+    .card__title { font-size: 22px; line-height: 1.15; font-weight: 700; margin: 6px 0 0; color: #223128; }
+    .card__latin { font-size: 14px; color: #728077; margin-top: 4px; font-style: italic; }
+    .card__primorye { font-size: 12px; margin-top: 8px; padding: 6px 10px; border-radius: 10px; background: #f0f7ed; color: #4a7057; line-height: 1.4; }
+    .card__primorye--risky { background: #fef3e8; color: #a05c2a; }
 
-    .badge--draft {
-      color: #6f7d73;
-    }
-
-    .card__body {
-      padding: 16px;
-    }
-
-    .card__kicker {
-      font-size: 11px;
-      color: #7e8c82;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .card__title {
-      font-size: 22px;
-      line-height: 1.15;
-      font-weight: 700;
-      margin: 6px 0 0;
-      color: #223128;
-    }
-
-    .card__latin {
-      font-size: 14px;
-      color: #728077;
-      margin-top: 4px;
-    }
-
-    .card__note {
-      font-size: 14px;
-      line-height: 1.5;
-      margin-top: 10px;
-      color: #566559;
-      min-height: 42px;
-    }
-
-    /* Иконки-критерии */
-    .card__criteria {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 14px;
-    }
-
+    .card__criteria { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
     .icon-badge {
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      background: #eef2eb;
-      border: 1px solid #e5ebe3;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
+      width: 34px; height: 34px; border-radius: 999px;
+      background: #eef2eb; border: 1px solid #e5ebe3;
+      display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
     }
+    .icon-badge svg { width: 17px; height: 17px; stroke: #4d6a58; stroke-width: 1.8; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .icon-badge--zone3 { background: #e8f3ff; border-color: #c8dff7; }
+    .icon-badge--zone3 svg { stroke: #2c6aad; }
+    .icon-badge--risky { background: #fff0e0; border-color: #f5d5a8; }
+    .icon-badge--risky svg { stroke: #b06020; }
 
-    .icon-badge svg {
-      width: 17px;
-      height: 17px;
-      stroke: #4d6a58;
-      stroke-width: 1.8;
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .icon-badge--soft svg {
-      stroke: #73867a;
-    }
-
-    .card__row {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 10px;
-      margin-top: 14px;
-    }
-
+    .card__row { display: flex; justify-content: flex-end; margin-top: 14px; }
     .card__link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      background: var(--green-soft-2);
-      color: #3f5d4a;
-      font-weight: 700;
-      font-size: 13px;
-      white-space: nowrap;
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 9px 16px; border-radius: 999px;
+      background: var(--green-soft-2); color: #3f5d4a;
+      font-weight: 700; font-size: 13px;
     }
 
-    /* =========================
-         MOBILE
-      ========================= */
-    @media (max-width: 1100px) {
-      .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
+    /* ========================= MOBILE ========================= */
+    @media (max-width: 1100px) { .grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
     @media (max-width: 760px) {
-      .container {
-        width: min(100% - 18px, 1320px);
-      }
-
-      .topbar-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .contact {
-        text-align: left;
-        min-width: 0;
-      }
-
-      .hero {
-        padding: 22px 16px 18px;
-        border-radius: 24px;
-      }
-
-      .hero-title {
-        font-size: 44px;
-      }
-
-      .search-row {
-        grid-template-columns: 1fr;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
+      .container { width: min(100% - 18px, 1320px); }
+      .topbar-inner { height: auto; padding: 12px 0; flex-wrap: wrap; }
+      .header-tags { display: none; }
+      .contact { gap: 10px; }
+      .hero { padding: 22px 16px 18px; border-radius: 24px; }
+      .hero-title { font-size: 44px; }
+      .search-row { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <div>
-        <h1 class="brand-title">Мои 12 соток</h1>
-        <div class="header-tags">
-          <span class="header-tag">плодово-ягодные</span>
-          <span class="header-tag">декоративные кустарники</span>
-          <span class="header-tag">хвойные</span>
-        </div>
-      </div>
-
-      <div class="contact">
-        <div class="contact-name">Альбина</div>
-        <a href="tel:+79644462081" class="contact-phone">+7 964 446 20 81</a>
-        <br>
-        <a href="#" class="insta-btn">
-          <img class="insta-avatar" src="1.jpg" alt="@primsad">
-          <span>@primsad</span>
-        </a>
+<header class="topbar">
+  <div class="container topbar-inner">
+    <div>
+      <h1 class="brand-title">Мои 12 соток</h1>
+      <div class="header-tags">
+        <span class="header-tag">плодово-ягодные</span>
+        <span class="header-tag">декоративные кустарники</span>
+        <span class="header-tag">хвойные</span>
       </div>
     </div>
-  </header>
+    <div class="contact">
+      <a href="tel:+79644462081" class="contact-phone">+7 964 446 20 81</a>
+      <a href="https://instagram.com/primsad" class="insta-btn">
+        <img class="insta-avatar" src="1.jpg" alt="@primsad">
+        <span>@primsad</span>
+      </a>
+    </div>
+  </div>
+</header>
 
-  <main>
-    <section class="hero-wrap">
-      <div class="container">
-        <div class="hero">
-          <h2 class="hero-title">Гортензии</h2>
-          <p class="hero-subtext">Подберите сорт для своего сада</p>
-
-          <div class="search-row">
-            <div class="searchbox">
-              <input type="text" placeholder="Найти сорт">
-            </div>
-            <button class="find-btn">НАЙТИ</button>
+<main>
+  <section class="hero-wrap">
+    <div class="container">
+      <div class="hero">
+        <h2 class="hero-title">Гортензии</h2>
+        <p class="hero-subtext">Подберите сорт для своего сада</p>
+        <div class="search-row">
+          <div class="searchbox">
+            <input type="text" id="search-input" placeholder="Найти сорт" oninput="filterCards()">
           </div>
-
-          <div class="filters">
-            <div class="filter-chip active">Все</div>
-            <div class="filter-chip">Метельчатые</div>
-            <div class="filter-chip">Светлые</div>
-          </div>
+          <button class="find-btn" onclick="filterCards()">НАЙТИ</button>
+        </div>
+        <div class="filters">
+          <div class="filter-chip active" data-filter="all" onclick="setFilter(this)">Все</div>
+          <div class="filter-chip" data-filter="paniculata" onclick="setFilter(this)">Метельчатые</div>
+          <div class="filter-chip" data-filter="arborescens" onclick="setFilter(this)">Древовидные</div>
+          <div class="filter-chip" data-filter="macrophylla" onclick="setFilter(this)">Крупнолистные</div>
+          <div class="filter-chip" data-filter="S" onclick="setFilter(this)">Маленькие (S)</div>
+          <div class="filter-chip" data-filter="L" onclick="setFilter(this)">Крупные (L)</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="catalog-section">
-      <div class="container">
-        <div class="grid">
+  <section class="catalog-section">
+    <div class="container">
+      <div class="grid" id="card-grid"></div>
+    </div>
+  </section>
+</main>
 
-          <!-- 1 -->
-          <a class="card" href="limelight.html">
-            <div class="card__media">
-              <span class="badge badge--new">Рекомендуем</span>
-              <img src="1.jpg" alt="Гортензия Лаймлайт">
-            </div>
+<script>
+const HYDRANGEAS = [
+  { id:"little-spooky", name:"Little Spooky", latinName:"Hydrangea paniculata 'Little Spooky'", type:"paniculata", typeRu:"Метельчатая", size:"S", heightCm:[40,50], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"excellent", primoryeNote:"Отлично подходит для Приморья — зимует без укрытия" },
+  { id:"touch-of-pink", name:"Touch of Pink", latinName:"Hydrangea paniculata 'Touch of Pink'", type:"paniculata", typeRu:"Метельчатая", size:"S", heightCm:[70,90], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"excellent", primoryeNote:"Надёжно зимует в Приморье" },
+  { id:"bobo", name:"Bobo", latinName:"Hydrangea paniculata 'Bobo'", type:"paniculata", typeRu:"Метельчатая", size:"S", heightCm:[60,75], light:"sun_partial", watering:"moderate", winterHardiness:3, primorye:"excellent", primoryeNote:"Один из лучших для Приморья — зона 3" },
+  { id:"little-blossom", name:"Little Blossom", latinName:"Hydrangea paniculata 'Little Blossom'", type:"paniculata", typeRu:"Метельчатая", size:"S", heightCm:[60,80], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"excellent", primoryeNote:"Надёжна в условиях Приморья" },
+  { id:"bombshell", name:"Bombshell", latinName:"Hydrangea paniculata 'Bombshell'", type:"paniculata", typeRu:"Метельчатая", size:"S", heightCm:[60,90], light:"sun_partial", watering:"moderate", winterHardiness:3, primorye:"excellent", primoryeNote:"Отличный выбор для Приморья — зона 3" },
+  { id:"cotton-cream", name:"Cotton Cream", latinName:"Hydrangea paniculata 'Cotton Cream'", type:"paniculata", typeRu:"Метельчатая", size:"M", heightCm:[100,150], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"good", primoryeNote:"Хорошо подходит для Приморья" },
+  { id:"samarskaya-lidiya", name:"Самарская Лидия", latinName:"Hydrangea paniculata 'Samarskaya Lidiya'", type:"paniculata", typeRu:"Метельчатая", size:"M", heightCm:[100,130], light:"sun_partial", watering:"moderate", winterHardiness:3, primorye:"excellent", primoryeNote:"Российская селекция — выведена для сурового климата" },
+  { id:"strawberry-blossom", name:"Strawberry Blossom", latinName:"Hydrangea paniculata 'Strawberry Blossom'", type:"paniculata", typeRu:"Метельчатая", size:"M", heightCm:[100,150], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"excellent", primoryeNote:"Хорошо зимует в Приморье" },
+  { id:"vanille-fraise", name:"Vanille Fraise", latinName:"Hydrangea paniculata 'Vanille Fraise'", type:"paniculata", typeRu:"Метельчатая", size:"L", heightCm:[150,200], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"excellent", primoryeNote:"Классика для Приморья — зимостойкая и эффектная" },
+  { id:"limelight", name:"Limelight", latinName:"Hydrangea paniculata 'Limelight'", type:"paniculata", typeRu:"Метельчатая", size:"L", heightCm:[180,240], light:"sun_partial", watering:"moderate", winterHardiness:3, primorye:"excellent", primoryeNote:"Один из лучших крупных сортов для Приморья", featured:true },
+  { id:"phantom", name:"Phantom", latinName:"Hydrangea paniculata 'Phantom'", type:"paniculata", typeRu:"Метельчатая", size:"L", heightCm:[200,250], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"excellent", primoryeNote:"Надёжно зимует в Приморье" },
+  { id:"polar-bear", name:"Polar Bear", latinName:"Hydrangea paniculata 'Polar Bear'", type:"paniculata", typeRu:"Метельчатая", size:"L", heightCm:[180,200], light:"sun_partial", watering:"moderate", winterHardiness:3, primorye:"excellent", primoryeNote:"Одна из лучших для сурового климата Приморья" },
+  { id:"fraise-melba", name:"Fraise Melba", latinName:"Hydrangea paniculata 'Fraise Melba'", type:"paniculata", typeRu:"Метельчатая", size:"L", heightCm:[180,220], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"good", primoryeNote:"Хорошо подходит для Приморья" },
+  { id:"annabelle", name:"Анабель", latinName:"Hydrangea arborescens 'Annabelle'", type:"arborescens", typeRu:"Древовидная", size:"M", heightCm:[100,150], light:"partial_shade", watering:"moderate_high", winterHardiness:3, primorye:"good", primoryeNote:"Зимует хорошо, цветёт на побегах текущего года" },
+  { id:"endless-summer", name:"Вечное лето", latinName:"Hydrangea macrophylla 'Bailmer'", type:"macrophylla", typeRu:"Крупнолистная", size:"M", heightCm:[90,150], light:"partial_shade", watering:"high", winterHardiness:5, primorye:"risky", primoryeNote:"⚠ Требует укрытия зимой. Рискованный выбор для Приморья." }
+];
 
-            <div class="card__body">
-              <div class="card__kicker">гортензия метельчатая</div>
+const ICONS = {
+  sun: `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.6"/><path d="M12 2.5v2.7M12 18.8v2.7M21.5 12h-2.7M5.2 12H2.5M18.7 5.3l-1.9 1.9M7.2 16.8l-1.9 1.9M18.7 18.7l-1.9-1.9M7.2 7.2 5.3 5.3"/></svg>`,
+  shade: `<svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>`,
+  snow: `<svg viewBox="0 0 24 24"><path d="M12 2.5v19M12 6.5 8.8 4.8M12 6.5 15.2 4.8M12 17.5 8.8 19.2M12 17.5 15.2 19.2M4.5 8l15 8M7.3 9.5 7 5.9M7.3 9.5 4.1 11.2M16.7 14.5 20 12.8M16.7 14.5 17 18.1M19.5 8 4.5 16M16.7 9.5 20 11.2M16.7 9.5 17 5.9M7.3 14.5 4 12.8M7.3 14.5 7 18.1"/></svg>`,
+  snowSimple: `<svg viewBox="0 0 24 24"><path d="M12 2.5v19M12 6.5 8.8 4.8M12 6.5 15.2 4.8M12 17.5 8.8 19.2M12 17.5 15.2 19.2M4.5 8l15 8M19.5 8 4.5 16"/></svg>`,
+  drop: `<svg viewBox="0 0 24 24"><path d="M12 3.5s-5.5 6.2-5.5 10a5.5 5.5 0 0 0 11 0c0-3.8-5.5-10-5.5-10z"/></svg>`,
+  dropHigh: `<svg viewBox="0 0 24 24"><path d="M12 3.5s-5.5 6.2-5.5 10a5.5 5.5 0 0 0 11 0c0-3.8-5.5-10-5.5-10z"/><path d="M9 13h6M12 11v4"/></svg>`,
+  sizeS: `<svg viewBox="0 0 24 24"><circle cx="12" cy="17" r="3.5"/><path d="M12 13.5V9"/><path d="M9.5 11 12 8.5 14.5 11"/></svg>`,
+  sizeM: `<svg viewBox="0 0 24 24"><circle cx="12" cy="16" r="4.5"/><path d="M12 11.5V7"/><path d="M9 9.5 12 7l3 2.5"/></svg>`,
+  sizeL: `<svg viewBox="0 0 24 24"><circle cx="12" cy="15" r="6"/><path d="M12 9V4.5"/><path d="M9 7 12 4.5 15 7"/></svg>`,
+  warning: `<svg viewBox="0 0 24 24"><path d="M12 9v5M12 17.5v.5M10.3 4.2 2.5 18A2 2 0 0 0 4.2 21h15.6a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0z"/></svg>`
+};
 
-              <h3 class="card__title">Гортензия Лаймлайт</h3>
-              <div class="card__latin">Limelight</div>
+function getIcons(h) {
+  const icons = [];
+  icons.push(h.light === 'sun_partial'
+    ? { svg: ICONS.sun, title: 'Солнце / полутень', cls: '' }
+    : { svg: ICONS.shade, title: 'Полутень / тень', cls: '' });
+  if (h.winterHardiness <= 3)
+    icons.push({ svg: ICONS.snow, title: `Зона ${h.winterHardiness} — очень зимостойкая`, cls: 'icon-badge--zone3' });
+  else if (h.primorye === 'risky')
+    icons.push({ svg: ICONS.warning, title: 'Требует укрытия в Приморье', cls: 'icon-badge--risky' });
+  else
+    icons.push({ svg: ICONS.snowSimple, title: `Зона ${h.winterHardiness} — зимостойкая`, cls: '' });
+  const sizeIcon = { S: ICONS.sizeS, M: ICONS.sizeM, L: ICONS.sizeL }[h.size];
+  icons.push({ svg: sizeIcon, title: `Размер ${h.size}: ${h.heightCm[0]}–${h.heightCm[1]} см`, cls: '' });
+  icons.push((h.watering === 'high' || h.watering === 'moderate_high')
+    ? { svg: ICONS.dropHigh, title: 'Обильный полив', cls: '' }
+    : { svg: ICONS.drop, title: 'Умеренный полив', cls: '' });
+  return icons;
+}
 
-              <div class="card__criteria">
-                <!-- солнце -->
-                <span class="icon-badge" title="Солнце">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <circle cx="12" cy="12" r="3.6"></circle>
-                    <path d="M12 2.5v2.7M12 18.8v2.7M21.5 12h-2.7M5.2 12H2.5M18.7 5.3l-1.9 1.9M7.2 16.8l-1.9 1.9M18.7 18.7l-1.9-1.9M7.2 7.2 5.3 5.3"></path>
-                  </svg>
-                </span>
-
-                <!-- морозостойкая -->
-                <span class="icon-badge" title="Морозостойкая">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M12 2.5v19"></path>
-                    <path d="M12 6.5 8.8 4.8"></path>
-                    <path d="M12 6.5 15.2 4.8"></path>
-                    <path d="M12 17.5 8.8 19.2"></path>
-                    <path d="M12 17.5 15.2 19.2"></path>
-                    <path d="M4.5 8l15 8"></path>
-                    <path d="M7.3 9.5 7 5.9"></path>
-                    <path d="M7.3 9.5 4.1 11.2"></path>
-                    <path d="M16.7 14.5 20 12.8"></path>
-                    <path d="M16.7 14.5 17 18.1"></path>
-                    <path d="M19.5 8 4.5 16"></path>
-                    <path d="M16.7 9.5 20 11.2"></path>
-                    <path d="M16.7 9.5 17 5.9"></path>
-                    <path d="M7.3 14.5 4 12.8"></path>
-                    <path d="M7.3 14.5 7 18.1"></path>
-                  </svg>
-                </span>
-
-                <!-- многолетняя -->
-                <span class="icon-badge" title="Многолетняя">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M7 14c0-4.8 4.5-7.7 10-8-0.2 5.6-3.2 10-8 10-1.2 0-2.2-0.3-3-1z"></path>
-                    <path d="M8 15c1.5-2.2 4.4-4.8 8.8-7"></path>
-                  </svg>
-                </span>
-
-                <!-- высота -->
-                <span class="icon-badge" title="Высота">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M12 4v16"></path>
-                    <path d="M8.5 7.5 12 4l3.5 3.5"></path>
-                    <path d="M8.5 16.5 12 20l3.5-3.5"></path>
-                  </svg>
-                </span>
-
-                <!-- полив -->
-                <span class="icon-badge" title="Полив">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M12 3.5c0 0-5.5 6.2-5.5 10a5.5 5.5 0 0 0 11 0c0-3.8-5.5-10-5.5-10z"></path>
-                  </svg>
-                </span>
-              </div>
-
-              <div class="card__row">
-                <span class="card__link">Смотреть</span>
-              </div>
-            </div>
-          </a>
-
-          <!-- 2 -->
-          <a class="card" href="#">
-            <div class="card__media">
-              <span class="badge badge--draft">В разработке</span>
-              <img src="2.jpg" alt="Гортензия Ванилла Фрейз">
-            </div>
-
-            <div class="card__body">
-              <div class="card__kicker">гортензия метельчатая</div>
-
-              <h3 class="card__title">Гортензия Ванилла Фрейз</h3>
-              <div class="card__latin">Vanille Fraise</div>
-
-              <div class="card__note">
-                Скоро здесь появится подробная карточка сорта с основными характеристиками.
-              </div>
-
-              <div class="card__criteria">
-                <span class="icon-badge icon-badge--soft" title="Солнце">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <circle cx="12" cy="12" r="3.6"></circle>
-                    <path d="M12 2.5v2.7M12 18.8v2.7M21.5 12h-2.7M5.2 12H2.5M18.7 5.3l-1.9 1.9M7.2 16.8l-1.9 1.9M18.7 18.7l-1.9-1.9M7.2 7.2 5.3 5.3"></path>
-                  </svg>
-                </span>
-
-                <span class="icon-badge icon-badge--soft" title="Морозостойкая">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M12 2.5v19"></path>
-                    <path d="M12 6.5 8.8 4.8"></path>
-                    <path d="M12 6.5 15.2 4.8"></path>
-                    <path d="M12 17.5 8.8 19.2"></path>
-                    <path d="M12 17.5 15.2 19.2"></path>
-                    <path d="M4.5 8l15 8"></path>
-                    <path d="M19.5 8 4.5 16"></path>
-                  </svg>
-                </span>
-
-                <span class="icon-badge icon-badge--soft" title="Многолетняя">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M7 14c0-4.8 4.5-7.7 10-8-0.2 5.6-3.2 10-8 10-1.2 0-2.2-0.3-3-1z"></path>
-                    <path d="M8 15c1.5-2.2 4.4-4.8 8.8-7"></path>
-                  </svg>
-                </span>
-
-                <span class="icon-badge icon-badge--soft" title="Высота">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M12 4v16"></path>
-                    <path d="M8.5 7.5 12 4l3.5 3.5"></path>
-                    <path d="M8.5 16.5 12 20l3.5-3.5"></path>
-                  </svg>
-                </span>
-              </div>
-
-              <div class="card__row">
-                <span class="card__link">Скоро</span>
-              </div>
-            </div>
-          </a>
-
-          <!-- 3 -->
-          <a class="card" href="#">
-            <div class="card__media">
-              <span class="badge badge--draft">В разработке</span>
-              <img src="3.jpg" alt="Гортензия Полар Бир">
-            </div>
-
-            <div class="card__body">
-              <div class="card__kicker">гортензия метельчатая</div>
-
-              <h3 class="card__title">Гортензия Полар Бир</h3>
-              <div class="card__latin">Polar Bear</div>
-
-              <div class="card__note">
-                Скоро здесь появится подробная карточка сорта с основными характеристиками.
-              </div>
-
-              <div class="card__criteria">
-                <span class="icon-badge icon-badge--soft" title="Солнце">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <circle cx="12" cy="12" r="3.6"></circle>
-                    <path d="M12 2.5v2.7M12 18.8v2.7M21.5 12h-2.7M5.2 12H2.5M18.7 5.3l-1.9 1.9M7.2 16.8l-1.9 1.9M18.7 18.7l-1.9-1.9M7.2 7.2 5.3 5.3"></path>
-                  </svg>
-                </span>
-
-                <span class="icon-badge icon-badge--soft" title="Морозостойкая">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M12 2.5v19"></path>
-                    <path d="M12 6.5 8.8 4.8"></path>
-                    <path d="M12 6.5 15.2 4.8"></path>
-                    <path d="M12 17.5 8.8 19.2"></path>
-                    <path d="M12 17.5 15.2 19.2"></path>
-                    <path d="M4.5 8l15 8"></path>
-                    <path d="M19.5 8 4.5 16"></path>
-                  </svg>
-                </span>
-
-                <span class="icon-badge icon-badge--soft" title="Многолетняя">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M7 14c0-4.8 4.5-7.7 10-8-0.2 5.6-3.2 10-8 10-1.2 0-2.2-0.3-3-1z"></path>
-                    <path d="M8 15c1.5-2.2 4.4-4.8 8.8-7"></path>
-                  </svg>
-                </span>
-
-                <span class="icon-badge icon-badge--soft" title="Полив">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M12 3.5c0 0-5.5 6.2-5.5 10a5.5 5.5 0 0 0 11 0c0-3.8-5.5-10-5.5-10z"></path>
-                  </svg>
-                </span>
-              </div>
-
-              <div class="card__row">
-                <span class="card__link">Скоро</span>
-              </div>
-            </div>
-          </a>
-
+function renderCards(data) {
+  const grid = document.getElementById('card-grid');
+  grid.innerHTML = data.map(h => {
+    const icons = getIcons(h).map(i =>
+      `<span class="icon-badge ${i.cls}" title="${i.title}">${i.svg}</span>`).join('');
+    const badge = h.featured
+      ? `<span class="badge badge--new">Рекомендуем</span>`
+      : h.primorye === 'risky'
+      ? `<span class="badge badge--risky">⚠ Укрытие зимой</span>`
+      : '';
+    const sizeLbl = { S:'S · мини', M:'M · средний', L:'L · крупный' }[h.size];
+    const primCls = h.primorye === 'risky' ? 'card__primorye--risky' : '';
+    return `
+      <a class="card" href="${h.id}.html" data-type="${h.type}" data-size="${h.size}" data-name="${h.name}">
+        <div class="card__media">
+          ${badge}
+          <span class="badge--size">${sizeLbl}</span>
+          <img src="images/${h.id}_1.jpg" alt="${h.name}"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="card__media-placeholder">
+            <svg viewBox="0 0 24 24"><path d="M12 3c0 0-7 4.5-7 9.5a7 7 0 0 0 14 0C19 7.5 12 3 12 3z"/><path d="M8 14c1-2 2.5-3.5 4-4"/></svg>
+            <span>Фото скоро</span>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+        <div class="card__body">
+          <div class="card__kicker">гортензия ${h.typeRu.toLowerCase()}</div>
+          <h3 class="card__title">${h.name}</h3>
+          <div class="card__latin">${h.latinName}</div>
+          <div class="card__primorye ${primCls}">${h.primoryeNote}</div>
+          <div class="card__criteria">${icons}</div>
+          <div class="card__row">
+            <span class="card__link">${h.primorye === 'risky' ? 'Подробнее' : 'Смотреть →'}</span>
+          </div>
+        </div>
+      </a>`;
+  }).join('');
+}
 
+let activeFilter = 'all';
+function setFilter(el) {
+  document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  activeFilter = el.dataset.filter;
+  filterCards();
+}
+function filterCards() {
+  const q = document.getElementById('search-input').value.toLowerCase();
+  document.querySelectorAll('.card').forEach(card => {
+    const matchFilter = activeFilter === 'all' || card.dataset.type === activeFilter || card.dataset.size === activeFilter;
+    const matchSearch = !q || card.dataset.name.toLowerCase().includes(q);
+    card.classList.toggle('hidden', !(matchFilter && matchSearch));
+  });
+}
+
+renderCards(HYDRANGEAS);
+</script>
 </body>
 </html>
