@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Сорт гортензии — Мои 12 соток</title>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Serif+Display&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #f3f2ee;
@@ -14,27 +16,140 @@
       --green-soft: #4b7d61;
       --green-soft-2: #dfe9dd;
       --chip: #edf1ea;
+      --gold: #c8a96e;
+      --gold-light: #ddc99a;
+      --gold-muted: rgba(200, 169, 110, 0.25);
+      --cream: #f5f0e8;
+      --cream-dim: rgba(245, 240, 232, 0.5);
+      --cream-faint: rgba(245, 240, 232, 0.1);
     }
     * { box-sizing: border-box; }
     body { margin: 0; font-family: "Manrope", sans-serif; background: var(--bg); color: var(--text); }
     img { display: block; max-width: 100%; }
     .container { width: min(900px, calc(100% - 36px)); margin: 0 auto; }
 
-    /* STICKY HEADER */
-    .topbar {
-      position: sticky; top: 0; z-index: 100;
-      background: linear-gradient(135deg, #123726 0%, #21513a 52%, #44795b 100%);
-      box-shadow: 0 4px 20px rgba(18,34,24,0.18);
+    /* HEADER */
+    .header-shell {
+      width: min(1320px, calc(100% - 36px));
+      margin: 18px auto 0;
     }
-    .topbar-inner {
-      display: flex; justify-content: space-between;
-      align-items: center; gap: 24px; height: 70px;
+    .site-header {
+      width: 100%;
+      position: sticky;
+      top: 10px;
+      z-index: 100;
+      overflow: hidden;
+      border-radius: 16px;
+      background: linear-gradient(120deg, #071007 0%, #0d1b0d 14%, #153015 34%, #1f4720 52%, #173717 68%, #0d1e0d 84%, #061006 100%);
+      box-shadow: 0 6px 32px rgba(0,0,0,0.2), 0 1px 4px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.03);
     }
-    .brand-title { margin: 0; color: #fff; font-size: clamp(18px,2vw,28px); font-weight: 800; letter-spacing: -0.04em; text-decoration: none; }
-    .contact { display: flex; align-items: center; gap: 14px; }
-    .contact-phone { font-size: clamp(16px,1.6vw,22px); font-weight: 800; color: #fff; text-decoration: none; letter-spacing: -0.03em; white-space: nowrap; }
-    .insta-btn { display: inline-flex; align-items: center; gap: 7px; background: rgba(255,255,255,0.14); padding: 6px 12px 6px 6px; border-radius: 999px; text-decoration: none; color: #fff; font-weight: 700; font-size: 13px; border: 1px solid rgba(255,255,255,0.12); }
-    .insta-avatar { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; background: rgba(255,255,255,0.2); }
+    .header-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+    .header-bg::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 50% 160% at 5% 50%, rgba(60, 95, 55, 0.5), transparent 60%),
+        radial-gradient(ellipse 40% 140% at 95% 40%, rgba(50, 80, 45, 0.35), transparent 55%),
+        radial-gradient(ellipse 90% 60% at 50% 110%, rgba(15, 28, 15, 0.6), transparent 50%),
+        radial-gradient(circle at 45% 30%, rgba(200, 169, 110, 0.04) 0%, transparent 45%);
+    }
+    .header-bg .leaf { position: absolute; opacity: 0.03; fill: var(--cream); }
+    .leaf-1 { width: 320px; height: 320px; top: -90px; left: -50px; transform: rotate(-25deg); }
+    .leaf-2 { width: 220px; height: 220px; top: -40px; right: 100px; transform: rotate(40deg); }
+    .leaf-3 { width: 270px; height: 270px; bottom: -110px; right: -40px; transform: rotate(15deg); }
+    .header-gold-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent 0%, var(--gold-muted) 15%, var(--gold) 50%, var(--gold-muted) 85%, transparent 100%);
+    }
+    .header-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 44px;
+      gap: 32px;
+    }
+    .header-logo { flex-shrink: 0; }
+    .logo-title {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 600;
+      font-size: 28px;
+      color: var(--cream);
+      letter-spacing: 0.02em;
+      line-height: 1;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+    .logo-title em { font-style: italic; font-weight: 400; color: var(--gold-light); }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+    .nav-divider-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--cream-faint); flex-shrink: 0; }
+    .nav-link {
+      font-family: "Manrope", sans-serif;
+      font-weight: 400;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      text-transform: lowercase;
+      color: var(--cream-dim);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 100px;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      cursor: default;
+    }
+    .nav-link:hover { color: var(--cream-dim); background: transparent; }
+    .header-contact { display: flex; align-items: center; gap: 20px; flex-shrink: 0; }
+    .contact-info { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+    .contact-name {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 14px;
+      color: var(--gold-light);
+      letter-spacing: 0.04em;
+    }
+    .contact-phone {
+      font-family: "Manrope", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      color: var(--cream);
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.3s ease;
+    }
+    .contact-phone:hover { color: var(--gold-light); }
+    .insta-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 100px;
+      border: 1px solid var(--cream-faint);
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+    }
+    .insta-link:hover { border-color: var(--gold-muted); background: var(--cream-faint); }
+    .insta-icon { width: 18px; height: 18px; color: var(--gold); flex-shrink: 0; }
+    .insta-text {
+      font-family: "Manrope", sans-serif;
+      font-weight: 400;
+      font-size: 13px;
+      color: var(--cream-dim);
+      letter-spacing: 0.02em;
+    }
 
     /* BACK */
     .back-wrap { padding: 20px 0 0; }
@@ -78,6 +193,8 @@
     }
     .param-card__label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
     .param-card__label svg { width: 14px; height: 14px; stroke: var(--muted); stroke-width: 1.8; fill: none; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+    .param-card__icons { display: inline-flex; align-items: center; gap: 4px; }
+    .param-card__icons svg { width: 14px; height: 14px; stroke: var(--muted); stroke-width: 1.8; fill: none; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
     .param-card__value { font-size: 15px; font-weight: 700; color: var(--text); }
     .param-card__sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
     .param-card--primorye { grid-column: 1 / -1; background: #f0f7ed; border-color: #c8e0c4; }
@@ -108,8 +225,8 @@
     .detail-block--full { grid-column: 1 / -1; }
     .detail-block h3 { margin: 0 0 14px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
     .detail-block p { margin: 0; font-size: 15px; line-height: 1.65; color: var(--text); }
-    .detail-block > .description-text { margin: 0; font-size: 15px; line-height: 1.65; color: var(--text); }
-    .description-lead { display: block; font-size: 18px; font-weight: 600; color: #1a2e22; line-height: 1.55; margin-bottom: 10px; }
+    .detail-block > .description-text { margin: 0; font-size: 15px; line-height: 1.8; color: var(--text); }
+    .multiline-text { display: block; line-height: 1.7; }
     .detail-block ul.features-list { list-style: none; padding: 0; margin: 0; }
     .detail-block ul.features-list li {
       position: relative;
@@ -137,7 +254,16 @@
     .name-meaning { font-style: italic; color: var(--muted); font-size: 15px; line-height: 1.6; }
 
     /* MOBILE */
+    @media (max-width: 1100px) {
+      .header-inner { flex-wrap: wrap; padding: 16px 24px; gap: 16px; }
+      .header-nav { order: 3; width: 100%; justify-content: center; padding-top: 8px; border-top: 1px solid var(--cream-faint); }
+    }
     @media (max-width: 700px) {
+      .header-shell { width: min(100% - 18px, 1320px); margin-top: 10px; }
+      .header-inner { flex-direction: column; align-items: center; text-align: center; padding: 20px; }
+      .contact-info { align-items: center; }
+      .header-contact { flex-direction: column; gap: 12px; }
+      .header-nav { flex-wrap: wrap; justify-content: center; }
       .sort-hero-grid { grid-template-columns: 1fr; }
       .details-grid { grid-template-columns: 1fr; }
       .detail-block--full { grid-column: 1; }
@@ -147,18 +273,45 @@
 </head>
 <body>
 
-<header class="topbar">
-  <div class="container topbar-inner">
-    <a href="index.html" class="brand-title">Мои 12 соток</a>
-    <div class="contact">
-      <a href="tel:+79644462081" class="contact-phone">+7 964 446 20 81</a>
-      <a href="https://instagram.com/primsad" class="insta-btn">
-        <img class="insta-avatar" src="1.jpg" alt="@primsad">
-        <span>@primsad</span>
-      </a>
+<div class="header-shell">
+  <header class="site-header">
+    <div class="header-bg">
+      <svg class="leaf leaf-1" viewBox="0 0 100 100"><path d="M50 5 C20 25 5 50 15 80 C25 95 45 98 50 95 C55 98 75 95 85 80 C95 50 80 25 50 5Z" fill="currentColor"/></svg>
+      <svg class="leaf leaf-2" viewBox="0 0 100 100"><path d="M50 5 C20 25 5 50 15 80 C25 95 45 98 50 95 C55 98 75 95 85 80 C95 50 80 25 50 5Z" fill="currentColor"/></svg>
+      <svg class="leaf leaf-3" viewBox="0 0 100 100"><path d="M50 5 C20 25 5 50 15 80 C25 95 45 98 50 95 C55 98 75 95 85 80 C95 50 80 25 50 5Z" fill="currentColor"/></svg>
     </div>
-  </div>
-</header>
+    <div class="header-gold-line"></div>
+    <div class="header-inner">
+      <div class="header-logo">
+        <a href="index.html" class="logo-title">Мои <em>12</em> соток</a>
+      </div>
+
+      <nav class="header-nav" aria-label="Категории каталога">
+        <span class="nav-link">декоративные</span>
+        <span class="nav-divider-dot"></span>
+        <span class="nav-link">плодовые</span>
+        <span class="nav-divider-dot"></span>
+        <span class="nav-link">хвойные</span>
+      </nav>
+
+      <div class="header-contact">
+        <div class="contact-info">
+          <span class="contact-name">Альбина</span>
+          <a href="tel:+79644462081" class="contact-phone">+7 964 446 20 81</a>
+        </div>
+
+        <a href="https://instagram.com/primsad" class="insta-link" target="_blank" rel="noreferrer">
+          <svg class="insta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+            <circle cx="12" cy="12" r="5"></circle>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+          </svg>
+          <span class="insta-text">@primsad</span>
+        </a>
+      </div>
+    </div>
+  </header>
+</div>
 
 <div id="page-content">
   <!-- Контент генерируется JS -->
@@ -202,7 +355,7 @@ const HYDRANGEAS = {
       "Начинающий садовод",
       "Кашпо",
     ],
-    nameMeaning: "«Маленькое пугало» — Halloween-тема в названии. Сорт выпущен в октябре, отсюда и мистическое имя.",
+    nameMeaning: "«Маленькое пугало» — Halloween-тема в названии\nСорт выпущен в октябре, отсюда и мистическое имя",
     images: ["little-spooky_1.png", "little-spooky_2.png", "little-spooky_3.png"]
   },
 
@@ -491,7 +644,7 @@ const HYDRANGEAS = {
       "Большой сад",
       "Акцентная посадка",
     ],
-    nameMeaning: "«Ваниль и клубника» — точное описание двух цветов на одном соцветии.",
+    nameMeaning: "Vanille Fraise — «Ванильная клубника» (фр.)\nНазвание за характерный переход цвета от ванильно-белого к клубнично-розовому",
     images: ["vanille-fraise_1.png", "vanille-fraise_2.png", "vanille-fraise_3.png"]
   },
 
@@ -600,7 +753,7 @@ const HYDRANGEAS = {
       "Большой сад",
       "Срезка",
     ],
-    nameMeaning: "«Белый медведь» — по белоснежному цвету и мощи куста.",
+    nameMeaning: "Polar Bear — «Полярный медведь»\nНазван за огромные белоснежные соцветия, напоминающие белого медведя",
     images: ["polar-bear_1.png", "polar-bear_2.png"]
   },
 
@@ -672,12 +825,12 @@ const HYDRANGEAS = {
       "Большой сад",
       "Начинающий садовод",
     ],
-    nameMeaning: "Женское имя Аннабель — нежное и классическое, как сам сорт.",
+    nameMeaning: "Названа в честь Анны ван Гельдерен (Anna van Gelderen)\nКлассическое женское имя — нежное и вечное, как сам сорт",
     images: ["annabelle_1.png", "annabelle_2.png"]
   },
 
   "endless-summer": {
-    name: "Вечное лето",
+    name: "Endless Summer",
     latinName: "Hydrangea macrophylla 'Bailmer'",
     typeRu: "Крупнолистная",
     size: "M",
@@ -689,7 +842,7 @@ const HYDRANGEAS = {
     bloomPeriod: "Июнь — октябрь",
     soil: "Кислая для голубого / нейтральная для розового, богатая, влагоёмкая",
     primorye: "risky",
-    primoryeNote: "⚠ Рискованный выбор для Приморья. Требует надёжного укрытия зимой. Рекомендуем метельчатые.",
+    primoryeNote: "Требует надёжного укрытия зимой\nРекомендуем метельчатые сорта как более надёжный вариант для Приморья",
     colorStages: [
       { label: "Кислая почва", color: "#80a8d8", name: "голубой / синий" },
       { label: "Нейтральная", color: "#e0a0c0", name: "розовый / сиреневый" }
@@ -725,10 +878,10 @@ const SORT_HEADER_NAMES = {
   "vanille-fraise": { ru: "Ваниль Фрез", en: "Vanille Fraise" },
   "limelight": { ru: "Лаймлайт", en: "Limelight" },
   "phantom": { ru: "Фантом", en: "Phantom" },
-  "polar-bear": { ru: "Полар Бэр", en: "Polar Bear" },
+  "polar-bear": { ru: "Полярный Медведь", en: "Polar Bear" },
   "fraise-melba": { ru: "Фрез Мельба", en: "Fraise Melba" },
   "annabelle": { ru: "Анабель", en: "Annabelle" },
-  "endless-summer": { ru: "Вечное лето", en: "Endless Summer" }
+  "endless-summer": { ru: "Вечное Лето", en: "Endless Summer" }
 };
 
 function getSortHeaderNames(id, h) {
@@ -747,7 +900,7 @@ function getSortId() {
 
 
 // ============================================================
-//  ТЕКСТ «О СОРТЕ»: первое предложение + остаток
+//  ФОРМАТИРОВАНИЕ ТЕКСТОВ
 // ============================================================
 function escapeHtml(s) {
   return String(s)
@@ -757,19 +910,61 @@ function escapeHtml(s) {
     .replace(/"/g, "&quot;");
 }
 
-function splitFirstSentence(text) {
-  const t = (text || "").trim();
-  if (!t) return { lead: "", rest: "" };
-  const m = t.match(/^(.+?[.!?])(\s+|$)(.*)$/s);
-  if (m) return { lead: m[1].trim(), rest: m[3].trim() };
-  return { lead: t, rest: "" };
+function normalizeWinterHardiness(text) {
+  const value = String(text || "");
+  if (value.includes("Зона 3")) return "Очень зимостойкая";
+  if (value.includes("Зона 4")) return "Зимостойкая";
+  if (value.includes("Зона 5")) return "Требует укрытия";
+  return value;
+}
+
+function humanizeText(text) {
+  return String(text || "")
+    .replace(/Зона 3\s*—\s*очень зимостойкая/gi, "Очень зимостойкая")
+    .replace(/Зона 5\s*—\s*требует укрытия/gi, "Требует укрытия")
+    .replace(/Зона 3/gi, "Очень зимостойкая")
+    .replace(/Зона 4/gi, "Зимостойкая")
+    .replace(/Зона 5/gi, "Требует укрытия");
+}
+
+function normalizeLightText(text) {
+  return String(text || "").replace("Солнце / полутень", "Солнце / лёгкая полутень");
+}
+
+function snowflakeIcon() {
+  return `<svg viewBox="0 0 24 24"><path d="M12 2.5v19M12 2.5 9.7 5M12 2.5 14.3 5M12 21.5 9.7 19M12 21.5 14.3 19M4.2 7.5l15.6 9M4.2 7.5 7.3 7.2M4.2 7.5 4.9 10.4M19.8 16.5 16.7 16.8M19.8 16.5 19.1 13.6M19.8 7.5 4.2 16.5M19.8 7.5 19.1 10.4M19.8 7.5 16.7 7.2M4.2 16.5 4.9 13.6M4.2 16.5 7.3 16.8"/></svg>`;
+}
+
+function sunIcon() {
+  return `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.6"/><path d="M12 2.5v2.7M12 18.8v2.7M21.5 12h-2.7M5.2 12H2.5M18.7 5.3l-1.9 1.9M18.7 18.7l-1.9-1.9M7.2 7.2 5.3 5.3M7.2 16.8l-1.9 1.9"/></svg>`;
+}
+
+function partialIcon() {
+  return `<svg viewBox="0 0 24 24"><path d="M5 15.5a4 4 0 1 1 1.2-7.8A5.5 5.5 0 0 1 17 9.5h.5a3.5 3.5 0 1 1 0 7H5z"/><path d="M15.5 4.5v2.2M15.5 12.3v2.2M19.4 8.4h-2.2M13.8 8.4h-2.2M18.3 5.6l-1.5 1.5M14.2 11.2l-1.5 1.5M18.3 11.2l-1.5-1.5"/></svg>`;
+}
+
+function lightIconsHtml(text) {
+  const value = normalizeLightText(text);
+  if (value.includes("/")) return `<span class="param-card__icons">${sunIcon()}${partialIcon()}</span>`;
+  return `<span class="param-card__icons">${partialIcon()}</span>`;
+}
+
+function formatMultilineTextHtml(text, className = "multiline-text") {
+  const lines = humanizeText(text)
+    .split(/\n+/)
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .map((line) => line.replace(/[.!?]+$/g, ""));
+  return `<span class="${className}">${lines.map(escapeHtml).join("<br>")}</span>`;
 }
 
 function formatDescriptionHtml(text) {
-  const { lead, rest } = splitFirstSentence(text);
-  const leadH = escapeHtml(lead);
-  const restH = rest ? " " + escapeHtml(rest) : "";
-  return `<p class="description-text"><span class="description-lead">${leadH}</span>${restH}</p>`;
+  const lines = humanizeText(text)
+    .split(/(?<=[.!?])\s+/)
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .map((line) => line.replace(/[.!?]+$/g, ""));
+  return `<p class="description-text">${lines.map(escapeHtml).join("<br>")}</p>`;
 }
 
 // ============================================================
@@ -799,7 +994,7 @@ function renderPage() {
     </div>`).join('<div style="display:flex;align-items:center;color:#c0c8be;font-size:18px;margin-bottom:16px">→</div>');
 
   const descriptionHtml = formatDescriptionHtml(h.description);
-  const featuresHtml = h.features.map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  const featuresHtml = h.features.map(f => `<li>${escapeHtml(humanizeText(f))}</li>`).join('');
   const forWhomHtml = h.forWhom.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('');
   const headerRu = escapeHtml(sortHeader.ru);
   const headerEn = escapeHtml(sortHeader.en);
@@ -837,7 +1032,6 @@ function renderPage() {
             <div class="params-grid">
               <div class="param-card">
                 <div class="param-card__label">
-                  <svg viewBox="0 0 24 24"><path d="M12 4v16M8.5 7.5 12 4l3.5 3.5M8.5 16.5 12 20l3.5-3.5"/></svg>
                   Размер
                 </div>
                 <div class="param-card__value">${h.heightCm[0]}–${h.heightCm[1]} см</div>
@@ -845,17 +1039,17 @@ function renderPage() {
               </div>
               <div class="param-card">
                 <div class="param-card__label">
-                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.6"/><path d="M12 2.5v2.7M12 18.8v2.7M21.5 12h-2.7M5.2 12H2.5M18.7 5.3l-1.9 1.9M18.7 18.7l-1.9-1.9M7.2 7.2 5.3 5.3M7.2 16.8l-1.9 1.9"/></svg>
+                  ${lightIconsHtml(h.light)}
                   Освещение
                 </div>
-                <div class="param-card__value">${h.light}</div>
+                <div class="param-card__value">${normalizeLightText(h.light)}</div>
               </div>
               <div class="param-card">
                 <div class="param-card__label">
-                  <svg viewBox="0 0 24 24"><path d="M12 2.5v19M12 6.5 8.8 4.8M12 6.5 15.2 4.8M12 17.5 8.8 19.2M12 17.5 15.2 19.2M4.5 8l15 8M19.5 8 4.5 16"/></svg>
+                  ${snowflakeIcon()}
                   Зимостойкость
                 </div>
-                <div class="param-card__value">${h.winterHardiness}</div>
+                <div class="param-card__value">${normalizeWinterHardiness(h.winterHardiness)}</div>
               </div>
               <div class="param-card">
                 <div class="param-card__label">
@@ -880,7 +1074,7 @@ function renderPage() {
               </div>
               <div class="param-card param-card--primorye ${primCls}">
                 <div class="param-card__label">Для Приморья</div>
-                <div class="param-card__value" style="font-size:13px;font-weight:600">${h.primoryeNote}</div>
+                <div class="param-card__value" style="font-size:13px;font-weight:600">${formatMultilineTextHtml(h.primoryeNote)}</div>
               </div>
             </div>
 
@@ -888,7 +1082,7 @@ function renderPage() {
               <h4>Хотите этот сорт?</h4>
               <p>Звоните или пишите — расскажем о наличии и посадке</p>
               <a href="tel:+79644462081" class="cta-phone">+7 964 446 20 81</a>
-              <a href="https://instagram.com/primsad" class="cta-insta">@primsad в Instagram</a>
+              <a href="https://instagram.com/primsad" class="cta-insta">@primsad</a>
             </div>
           </div>
         </div>
@@ -921,7 +1115,7 @@ function renderPage() {
 
           <div class="detail-block detail-block--full">
             <h3>Что означает название</h3>
-            <p class="name-meaning">${h.nameMeaning}</p>
+            <p class="name-meaning">${formatMultilineTextHtml(h.nameMeaning, "multiline-text")}</p>
           </div>
 
         </div>

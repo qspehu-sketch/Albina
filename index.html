@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Гортензии — Мои 12 соток</title>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Serif+Display&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #f3f2ee;
@@ -19,91 +21,197 @@
       --chip: #edf1ea;
       --chip-text: #506055;
       --header-height: 70px;
+      --bg-deep: #0e1a0e;
+      --gold: #c8a96e;
+      --gold-light: #ddc99a;
+      --gold-muted: rgba(200, 169, 110, 0.25);
+      --cream: #f5f0e8;
+      --cream-dim: rgba(245, 240, 232, 0.5);
+      --cream-faint: rgba(245, 240, 232, 0.1);
     }
     * { box-sizing: border-box; }
     body { margin: 0; font-family: "Manrope", sans-serif; background: var(--bg); color: var(--text); }
     img { display: block; max-width: 100%; }
     .container { width: min(1320px, calc(100% - 36px)); margin: 0 auto; }
 
-    /* ========================= STICKY HEADER ========================= */
-    .topbar {
+    /* ========================= HEADER ========================= */
+    .header-shell {
+      width: min(1320px, calc(100% - 36px));
+      margin: 18px auto 0;
+    }
+    .site-header {
+      width: 100%;
       position: sticky;
-      top: 0;
+      top: 10px;
       z-index: 100;
-      background: linear-gradient(135deg, #123726 0%, #21513a 52%, #44795b 100%);
-      box-shadow: 0 4px 20px rgba(18,34,24,0.18);
-      padding: 0;
+      overflow: hidden;
+      border-radius: 16px;
+      background: linear-gradient(
+        120deg,
+        #071007 0%,
+        #0d1b0d 14%,
+        #153015 34%,
+        #1f4720 52%,
+        #173717 68%,
+        #0d1e0d 84%,
+        #061006 100%
+      );
+      box-shadow:
+        0 6px 32px rgba(0,0,0,0.2),
+        0 1px 4px rgba(0,0,0,0.12),
+        inset 0 1px 0 rgba(255,255,255,0.03);
     }
-    .topbar-inner {
+    .header-bg {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .header-bg::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 50% 160% at 5% 50%, rgba(60, 95, 55, 0.5), transparent 60%),
+        radial-gradient(ellipse 40% 140% at 95% 40%, rgba(50, 80, 45, 0.35), transparent 55%),
+        radial-gradient(ellipse 90% 60% at 50% 110%, rgba(15, 28, 15, 0.6), transparent 50%),
+        radial-gradient(circle at 45% 30%, rgba(200, 169, 110, 0.04) 0%, transparent 45%);
+    }
+    .header-bg .leaf {
+      position: absolute;
+      opacity: 0.03;
+      fill: var(--cream);
+    }
+    .leaf-1 { width: 320px; height: 320px; top: -90px; left: -50px; transform: rotate(-25deg); }
+    .leaf-2 { width: 220px; height: 220px; top: -40px; right: 100px; transform: rotate(40deg); }
+    .leaf-3 { width: 270px; height: 270px; bottom: -110px; right: -40px; transform: rotate(15deg); }
+    .header-gold-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent 0%, var(--gold-muted) 15%, var(--gold) 50%, var(--gold-muted) 85%, transparent 100%);
+    }
+    .header-inner {
+      position: relative;
+      z-index: 1;
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      align-items: center;
+      padding: 22px 44px;
       gap: 24px;
-      height: var(--header-height);
     }
-    .brand-title {
-      margin: 0;
-      color: #fff;
-      font-size: clamp(20px, 2.2vw, 32px);
+    .header-logo { flex-shrink: 0; }
+    .logo-title {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 600;
+      font-size: 28px;
+      color: var(--cream);
+      letter-spacing: 0.02em;
       line-height: 1;
-      font-weight: 800;
-      letter-spacing: -0.04em;
       white-space: nowrap;
+      text-decoration: none;
     }
-    .header-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 6px;
+    .logo-title em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--gold-light);
     }
-    .header-tag {
-      padding: 5px 11px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.08);
-      color: rgba(255,255,255,0.85);
-      font-size: 12px;
-      white-space: nowrap;
-    }
-    .contact {
+    .header-nav {
       display: flex;
       align-items: center;
-      gap: 16px;
-      color: #fff;
+      gap: 6px;
       flex-shrink: 0;
     }
-    .contact-phone {
-      font-size: clamp(18px, 1.8vw, 26px);
-      font-weight: 800;
-      color: #fff;
-      text-decoration: none;
-      letter-spacing: -0.03em;
-      white-space: nowrap;
-    }
-    .insta-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      background: rgba(255,255,255,0.14);
-      padding: 6px 12px 6px 6px;
-      border-radius: 999px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: 700;
-      font-size: 13px;
-      border: 1px solid rgba(255,255,255,0.12);
-      white-space: nowrap;
-    }
-    .insta-avatar {
-      width: 28px;
-      height: 28px;
+    .nav-divider-dot {
+      width: 3px;
+      height: 3px;
       border-radius: 50%;
-      object-fit: cover;
-      background: rgba(255,255,255,0.2);
+      background: var(--cream-faint);
+      flex-shrink: 0;
+    }
+    .nav-link {
+      font-family: "Manrope", sans-serif;
+      font-weight: 400;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      text-transform: lowercase;
+      color: var(--cream-dim);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 100px;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      cursor: default;
+    }
+    .nav-link:hover {
+      color: var(--cream-dim);
+      background: transparent;
+    }
+    .header-contact {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-shrink: 0;
+    }
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+    }
+    .contact-name {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 14px;
+      color: var(--gold-light);
+      letter-spacing: 0.04em;
+    }
+    .contact-phone {
+      font-family: "Manrope", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      color: var(--cream);
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.3s ease;
+    }
+    .contact-phone:hover { color: var(--gold-light); }
+    .insta-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 100px;
+      border: 1px solid var(--cream-faint);
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+    }
+    .insta-link:hover {
+      border-color: var(--gold-muted);
+      background: var(--cream-faint);
+    }
+    .insta-icon {
+      width: 18px;
+      height: 18px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .insta-text {
+      font-family: "Manrope", sans-serif;
+      font-weight: 400;
+      font-size: 13px;
+      color: var(--cream-dim);
+      letter-spacing: 0.02em;
+      white-space: nowrap;
     }
 
     /* ========================= HERO ========================= */
-    .hero-wrap { padding: 22px 0 18px; }
+    .hero-wrap { padding: 20px 0 18px; }
     .hero {
       width: 100%;
       background: rgba(255,255,255,0.84);
@@ -218,40 +326,68 @@
     }
 
     /* ========================= MOBILE ========================= */
-    @media (max-width: 1100px) { .grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+    @media (max-width: 1100px) {
+      .header-inner { flex-wrap: wrap; padding: 16px 24px; gap: 16px; }
+      .header-nav { order: 3; width: 100%; justify-content: center; padding-top: 8px; border-top: 1px solid var(--cream-faint); }
+      .grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
     @media (max-width: 760px) {
       .container { width: min(100% - 18px, 1320px); }
-      .topbar-inner { height: auto; padding: 12px 0; flex-wrap: wrap; }
-      .header-tags { display: none; }
-      .contact { gap: 10px; }
+      .header-shell { width: min(100% - 18px, 1320px); margin-top: 10px; }
       .hero { padding: 22px 16px 18px; border-radius: 24px; }
       .hero-title { font-size: 44px; }
       .search-row { grid-template-columns: 1fr; }
       .grid { grid-template-columns: 1fr; }
     }
+    @media (max-width: 600px) {
+      .header-inner { flex-direction: column; align-items: center; text-align: center; padding: 20px; }
+      .contact-info { align-items: center; }
+      .header-contact { flex-direction: column; gap: 12px; }
+      .header-nav { flex-wrap: wrap; justify-content: center; }
+    }
   </style>
 </head>
 <body>
 
-<header class="topbar">
-  <div class="container topbar-inner">
-    <div>
-      <h1 class="brand-title">Мои 12 соток</h1>
-      <div class="header-tags">
-        <span class="header-tag">плодово-ягодные</span>
-        <span class="header-tag">декоративные кустарники</span>
-        <span class="header-tag">хвойные</span>
+<div class="header-shell">
+  <header class="site-header">
+    <div class="header-bg">
+      <svg class="leaf leaf-1" viewBox="0 0 100 100"><path d="M50 5 C20 25 5 50 15 80 C25 95 45 98 50 95 C55 98 75 95 85 80 C95 50 80 25 50 5Z" fill="currentColor"/></svg>
+      <svg class="leaf leaf-2" viewBox="0 0 100 100"><path d="M50 5 C20 25 5 50 15 80 C25 95 45 98 50 95 C55 98 75 95 85 80 C95 50 80 25 50 5Z" fill="currentColor"/></svg>
+      <svg class="leaf leaf-3" viewBox="0 0 100 100"><path d="M50 5 C20 25 5 50 15 80 C25 95 45 98 50 95 C55 98 75 95 85 80 C95 50 80 25 50 5Z" fill="currentColor"/></svg>
+    </div>
+    <div class="header-gold-line"></div>
+    <div class="header-inner">
+      <div class="header-logo">
+        <a href="index.html" class="logo-title">Мои <em>12</em> соток</a>
+      </div>
+
+      <nav class="header-nav" aria-label="Категории каталога">
+        <span class="nav-link">декоративные</span>
+        <span class="nav-divider-dot"></span>
+        <span class="nav-link">плодовые</span>
+        <span class="nav-divider-dot"></span>
+        <span class="nav-link">хвойные</span>
+      </nav>
+
+      <div class="header-contact">
+        <div class="contact-info">
+          <span class="contact-name">Альбина</span>
+          <a href="tel:+79644462081" class="contact-phone">+7 964 446 20 81</a>
+        </div>
+
+        <a href="https://instagram.com/primsad" class="insta-link" target="_blank" rel="noreferrer">
+          <svg class="insta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+            <circle cx="12" cy="12" r="5"></circle>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+          </svg>
+          <span class="insta-text">@primsad</span>
+        </a>
       </div>
     </div>
-    <div class="contact">
-      <a href="tel:+79644462081" class="contact-phone">+7 964 446 20 81</a>
-      <a href="https://instagram.com/primsad" class="insta-btn">
-        <img class="insta-avatar" src="1.jpg" alt="@primsad">
-        <span>@primsad</span>
-      </a>
-    </div>
-  </div>
-</header>
+  </header>
+</div>
 
 <main>
   <section class="hero-wrap">
@@ -277,7 +413,7 @@
     </div>
   </section>
 
-  <section class="catalog-section">
+  <section class="catalog-section" id="catalog">
     <div class="container">
       <div class="grid" id="card-grid"></div>
     </div>
@@ -286,7 +422,7 @@
 
 <script>
 const HYDRANGEAS = [
-  { id:"little-spooky", name:"Little Spooky", nameRu:"Литтл Споки", latinName:"Hydrangea paniculata 'Little Spooky'", type:"paniculata", typeRu:"Метельчатая", size:"S", heightCm:[40,50], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"excellent", primoryeNote:"Отлично подходит для Приморья — зимует без укрытия" },
+  { id:"little-spooky", name:"Little Spooky", nameRu:"Литтл Спуки", latinName:"Hydrangea paniculata 'Little Spooky'", type:"paniculata", typeRu:"Метельчатая", size:"S", heightCm:[40,50], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"excellent", primoryeNote:"Отлично подходит для Приморья — зимует без укрытия" },
   { id:"touch-of-pink", name:"Touch of Pink", nameRu:"Тач оф Пинк", latinName:"Hydrangea paniculata 'Touch of Pink'", type:"paniculata", typeRu:"Метельчатая", size:"S", heightCm:[70,90], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"excellent", primoryeNote:"Надёжно зимует в Приморье" },
   { id:"bobo", name:"Bobo", nameRu:"Бобо", latinName:"Hydrangea paniculata 'Bobo'", type:"paniculata", typeRu:"Метельчатая", size:"S", heightCm:[60,75], light:"sun_partial", watering:"moderate", winterHardiness:3, primorye:"excellent", primoryeNote:"Один из лучших для Приморья — зона 3" },
   { id:"little-blossom", name:"Little Blossom", nameRu:"Литтл Блоссом", latinName:"Hydrangea paniculata 'Little Blossom'", type:"paniculata", typeRu:"Метельчатая", size:"S", heightCm:[60,80], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"excellent", primoryeNote:"Надёжна в условиях Приморья" },
@@ -297,38 +433,45 @@ const HYDRANGEAS = [
   { id:"vanille-fraise", name:"Vanille Fraise", nameRu:"Ваниль Фрез", latinName:"Hydrangea paniculata 'Vanille Fraise'", type:"paniculata", typeRu:"Метельчатая", size:"L", heightCm:[150,200], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"excellent", primoryeNote:"Классика для Приморья — зимостойкая и эффектная" },
   { id:"limelight", name:"Limelight", nameRu:"Лаймлайт", latinName:"Hydrangea paniculata 'Limelight'", type:"paniculata", typeRu:"Метельчатая", size:"L", heightCm:[180,240], light:"sun_partial", watering:"moderate", winterHardiness:3, primorye:"excellent", primoryeNote:"Один из лучших крупных сортов для Приморья", featured:true },
   { id:"phantom", name:"Phantom", nameRu:"Фантом", latinName:"Hydrangea paniculata 'Phantom'", type:"paniculata", typeRu:"Метельчатая", size:"L", heightCm:[200,250], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"excellent", primoryeNote:"Надёжно зимует в Приморье" },
-  { id:"polar-bear", name:"Polar Bear", nameRu:"Полар Бэр", latinName:"Hydrangea paniculata 'Polar Bear'", type:"paniculata", typeRu:"Метельчатая", size:"L", heightCm:[180,200], light:"sun_partial", watering:"moderate", winterHardiness:3, primorye:"excellent", primoryeNote:"Одна из лучших для сурового климата Приморья" },
+  { id:"polar-bear", name:"Polar Bear", nameRu:"Полярный Медведь", latinName:"Hydrangea paniculata 'Polar Bear'", type:"paniculata", typeRu:"Метельчатая", size:"L", heightCm:[180,200], light:"sun_partial", watering:"moderate", winterHardiness:3, primorye:"excellent", primoryeNote:"Одна из лучших для сурового климата Приморья" },
   { id:"fraise-melba", name:"Fraise Melba", nameRu:"Фрез Мельба", latinName:"Hydrangea paniculata 'Fraise Melba'", type:"paniculata", typeRu:"Метельчатая", size:"L", heightCm:[180,220], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"good", primoryeNote:"Хорошо подходит для Приморья" },
   { id:"annabelle", name:"Анабель", nameRu:"Анабель", latinName:"Hydrangea arborescens 'Annabelle'", type:"arborescens", typeRu:"Древовидная", size:"M", heightCm:[100,150], light:"partial_shade", watering:"moderate_high", winterHardiness:3, primorye:"good", primoryeNote:"Зимует хорошо, цветёт на побегах текущего года" },
-  { id:"endless-summer", name:"Вечное лето", nameRu:"Вечное лето", latinName:"Hydrangea macrophylla 'Bailmer'", type:"macrophylla", typeRu:"Крупнолистная", size:"M", heightCm:[90,150], light:"partial_shade", watering:"high", winterHardiness:5, primorye:"risky", primoryeNote:"⚠ Требует укрытия зимой. Рискованный выбор для Приморья." }
+  { id:"endless-summer", name:"Endless Summer", nameRu:"Вечное Лето", latinName:"Hydrangea macrophylla 'Bailmer'", type:"macrophylla", typeRu:"Крупнолистная", size:"M", heightCm:[90,150], light:"partial_shade", watering:"high", winterHardiness:5, primorye:"risky", primoryeNote:"Требует надёжного укрытия зимой. Рекомендуем метельчатые сорта как более надёжный вариант для Приморья" }
 ];
 
 const ICONS = {
   sun: `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.6"/><path d="M12 2.5v2.7M12 18.8v2.7M21.5 12h-2.7M5.2 12H2.5M18.7 5.3l-1.9 1.9M7.2 16.8l-1.9 1.9M18.7 18.7l-1.9-1.9M7.2 7.2 5.3 5.3"/></svg>`,
-  shade: `<svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>`,
-  snow: `<svg viewBox="0 0 24 24"><path d="M12 2.5v19M12 6.5 8.8 4.8M12 6.5 15.2 4.8M12 17.5 8.8 19.2M12 17.5 15.2 19.2M4.5 8l15 8M7.3 9.5 7 5.9M7.3 9.5 4.1 11.2M16.7 14.5 20 12.8M16.7 14.5 17 18.1M19.5 8 4.5 16M16.7 9.5 20 11.2M16.7 9.5 17 5.9M7.3 14.5 4 12.8M7.3 14.5 7 18.1"/></svg>`,
-  snowSimple: `<svg viewBox="0 0 24 24"><path d="M12 2.5v19M12 6.5 8.8 4.8M12 6.5 15.2 4.8M12 17.5 8.8 19.2M12 17.5 15.2 19.2M4.5 8l15 8M19.5 8 4.5 16"/></svg>`,
+  partial: `<svg viewBox="0 0 24 24"><path d="M5 15.5a4 4 0 1 1 1.2-7.8A5.5 5.5 0 0 1 17 9.5h.5a3.5 3.5 0 1 1 0 7H5z"/><path d="M15.5 4.5v2.2M15.5 12.3v2.2M19.4 8.4h-2.2M13.8 8.4h-2.2M18.3 5.6l-1.5 1.5M14.2 11.2l-1.5 1.5M18.3 11.2l-1.5-1.5"/></svg>`,
+  snow: `<svg viewBox="0 0 24 24"><path d="M12 2.5v19M12 2.5 9.7 5M12 2.5 14.3 5M12 21.5 9.7 19M12 21.5 14.3 19M4.2 7.5l15.6 9M4.2 7.5 7.3 7.2M4.2 7.5 4.9 10.4M19.8 16.5 16.7 16.8M19.8 16.5 19.1 13.6M19.8 7.5 4.2 16.5M19.8 7.5 19.1 10.4M19.8 7.5 16.7 7.2M4.2 16.5 4.9 13.6M4.2 16.5 7.3 16.8"/></svg>`,
   drop: `<svg viewBox="0 0 24 24"><path d="M12 3.5s-5.5 6.2-5.5 10a5.5 5.5 0 0 0 11 0c0-3.8-5.5-10-5.5-10z"/></svg>`,
   dropHigh: `<svg viewBox="0 0 24 24"><path d="M12 3.5s-5.5 6.2-5.5 10a5.5 5.5 0 0 0 11 0c0-3.8-5.5-10-5.5-10z"/><path d="M9 13h6M12 11v4"/></svg>`,
-  sizeS: `<svg viewBox="0 0 24 24"><circle cx="12" cy="17" r="3.5"/><path d="M12 13.5V9"/><path d="M9.5 11 12 8.5 14.5 11"/></svg>`,
-  sizeM: `<svg viewBox="0 0 24 24"><circle cx="12" cy="16" r="4.5"/><path d="M12 11.5V7"/><path d="M9 9.5 12 7l3 2.5"/></svg>`,
-  sizeL: `<svg viewBox="0 0 24 24"><circle cx="12" cy="15" r="6"/><path d="M12 9V4.5"/><path d="M9 7 12 4.5 15 7"/></svg>`,
-  warning: `<svg viewBox="0 0 24 24"><path d="M12 9v5M12 17.5v.5M10.3 4.2 2.5 18A2 2 0 0 0 4.2 21h15.6a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0z"/></svg>`
 };
+
+function getWinterLabel(zone) {
+  if (zone <= 3) return 'Очень зимостойкая';
+  if (zone === 4) return 'Зимостойкая';
+  return 'Требует укрытия';
+}
+
+function humanizeText(text) {
+  return String(text || '')
+    .replace(/Зона 3\s*—\s*очень зимостойкая/gi, 'Очень зимостойкая')
+    .replace(/Зона 5\s*—\s*требует укрытия/gi, 'Требует укрытия')
+    .replace(/Зона 3/gi, 'Очень зимостойкая')
+    .replace(/Зона 4/gi, 'Зимостойкая')
+    .replace(/Зона 5/gi, 'Требует укрытия');
+}
 
 function getIcons(h) {
   const icons = [];
-  icons.push(h.light === 'sun_partial'
-    ? { svg: ICONS.sun, title: 'Солнце / полутень', cls: '' }
-    : { svg: ICONS.shade, title: 'Полутень / тень', cls: '' });
-  if (h.winterHardiness <= 3)
-    icons.push({ svg: ICONS.snow, title: `Зона ${h.winterHardiness} — очень зимостойкая`, cls: 'icon-badge--zone3' });
-  else if (h.primorye === 'risky')
-    icons.push({ svg: ICONS.warning, title: 'Требует укрытия в Приморье', cls: 'icon-badge--risky' });
-  else
-    icons.push({ svg: ICONS.snowSimple, title: `Зона ${h.winterHardiness} — зимостойкая`, cls: '' });
-  const sizeIcon = { S: ICONS.sizeS, M: ICONS.sizeM, L: ICONS.sizeL }[h.size];
-  icons.push({ svg: sizeIcon, title: `Размер ${h.size}: ${h.heightCm[0]}–${h.heightCm[1]} см`, cls: '' });
+  if (h.light === 'sun_partial') {
+    icons.push({ svg: ICONS.sun, title: 'Солнце', cls: '' });
+    icons.push({ svg: ICONS.partial, title: 'Лёгкая полутень', cls: '' });
+  } else {
+    icons.push({ svg: ICONS.partial, title: 'Полутень', cls: '' });
+  }
+  const winterCls = h.winterHardiness <= 3 ? 'icon-badge--zone3' : (h.winterHardiness >= 5 ? 'icon-badge--risky' : '');
+  icons.push({ svg: ICONS.snow, title: getWinterLabel(h.winterHardiness), cls: winterCls });
   icons.push((h.watering === 'high' || h.watering === 'moderate_high')
     ? { svg: ICONS.dropHigh, title: 'Обильный полив', cls: '' }
     : { svg: ICONS.drop, title: 'Умеренный полив', cls: '' });
@@ -348,7 +491,7 @@ function renderCards(data) {
     const sizeLbl = { S:'S · мини', M:'M · средний', L:'L · крупный' }[h.size];
     const primCls = h.primorye === 'risky' ? 'card__primorye--risky' : '';
     return `
-      <a class="card" href="${h.id}.html" data-type="${h.type}" data-size="${h.size}" data-name="${h.name}">
+      <a class="card" href="${h.id}.html" data-type="${h.type}" data-size="${h.size}" data-name="${h.name} ${h.nameRu}">
         <div class="card__media">
           ${badge}
           <span class="badge--size">${sizeLbl}</span>
@@ -363,7 +506,7 @@ function renderCards(data) {
           <div class="card__kicker">гортензия ${h.typeRu.toLowerCase()}</div>
           <h3 class="card__title">${h.nameRu}</h3>
           <div class="card__latin">${h.name}</div>
-          <div class="card__primorye ${primCls}">${h.primoryeNote}</div>
+          <div class="card__primorye ${primCls}">${humanizeText(h.primoryeNote)}</div>
           <div class="card__criteria">${icons}</div>
           <div class="card__row">
             <span class="card__link">${h.primorye === 'risky' ? 'Подробнее' : 'Смотреть →'}</span>
