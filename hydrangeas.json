@@ -1,693 +1,996 @@
 [
-    {
-      "id": "little-spooky",
-      "slug": "little-spooky",
-      "name": "Little Spooky",
-      "nameRu": "Литтл Спуки",
-      "latinName": "Hydrangea paniculata 'Little Spooky'",
-      "type": "paniculata",
-      "typeRu": "Метельчатая",
-      "size": "S",
-      "heightCm": [40, 50],
-      "widthCm": [40, 50],
-      "light": "sun_partial",
-      "lightRu": "Солнце / полутень",
-      "watering": "moderate",
-      "wateringRu": "Умеренный",
-      "winterHardiness": 4,
-      "winterHardinessRu": "Зона 4 — зимостойкая, укрытие не нужно",
-      "primorye": "excellent",
-      "primoryeNote": "Отлично подходит для Приморья — зимует без укрытия",
-      "bloomStart": "Июль",
-      "bloomEnd": "Октябрь",
-      "bloomDescription": "Долгое и обильное цветение с лета до поздней осени",
-      "colorStages": [
-        { "stage": "Начало", "color": "бело-зелёный" },
-        { "stage": "Середина", "color": "белый" },
-        { "stage": "Осень", "color": "розово-лиловый" }
-      ],
-      "inflorescenceType": "panicle",
-      "inflorescenceTypeRu": "Метёлка",
-      "shortDescription": "Один из самых компактных метельчатых сортов. Подходит для кашпо и маленьких садов.",
-      "features": [
-        "Очень компактный куст — идеален для кашпо и контейнеров",
-        "Хорошо держит форму без обрезки",
-        "Долгое цветение — с лета до заморозков",
-        "Крепкие побеги не полегают под соцветиями"
-      ],
-      "forWhom": ["Маленький сад", "Балкон / кашпо", "Начинающий садовод"],
-      "soil": "Слабокислая, дренированная, богатая гумусом",
-      "nameTranslation": "Маленькое пугало — Halloween-тема в названии",
-      "images": {
-        "bush": "images/hydrangea/little-spooky_bush.jpg",
-        "flower": "images/hydrangea/little-spooky_flower.jpg",
-        "stages": []
+  {
+    "id": "little-spooky",
+    "slug": "little-spooky",
+    "name": "Little Spooky",
+    "nameRu": "Литтл Спуки",
+    "latinName": "Hydrangea paniculata 'Little Spooky'",
+    "type": "paniculata",
+    "typeRu": "Метельчатая",
+    "size": "S",
+    "heightCm": [
+      40,
+      50
+    ],
+    "widthCm": [
+      40,
+      50
+    ],
+    "light": "sun_partial",
+    "lightRu": "Солнце / полутень",
+    "watering": "moderate",
+    "wateringRu": "Умеренный",
+    "winterHardiness": 4,
+    "winterHardinessRu": "Зона 4 — зимостойкая, укрытие не нужно",
+    "primorye": "excellent",
+    "primoryeNote": "Отлично подходит для Приморья — зимует без укрытия",
+    "bloomStart": "Июль",
+    "bloomEnd": "Октябрь",
+    "bloomDescription": "Долгое и обильное цветение с лета до поздней осени",
+    "colorStages": [
+      {
+        "stage": "Начало",
+        "color": "бело-зелёный"
       },
-      "sourceUrl": "https://www.provenwinners.com/plants/hydrangea/little-spooky-hydrangea-paniculata"
+      {
+        "stage": "Середина",
+        "color": "белый"
+      },
+      {
+        "stage": "Осень",
+        "color": "розово-лиловый"
+      }
+    ],
+    "inflorescenceType": "panicle",
+    "inflorescenceTypeRu": "Метёлка",
+    "shortDescription": "Один из самых компактных метельчатых сортов. Подходит для кашпо и маленьких садов.",
+    "features": [
+      "Высота всего 40–50 см — самый компактный в коллекции",
+      "Цветёт с июля до первых заморозков",
+      "Не требует формирующей обрезки — сам держит форму",
+      "Идеален для кашпо и контейнерного выращивания",
+      "Зона 4 — зимует без укрытия"
+    ],
+    "forWhom": [
+      "Маленький сад",
+      "Балкон и терраса",
+      "Начинающий садовод",
+      "Кашпо"
+    ],
+    "soil": "Слабокислая, дренированная, богатая гумусом",
+    "nameTranslation": "Маленькое пугало — Halloween-тема в названии",
+    "images": {
+      "bush": "images/hydrangea/little-spooky_bush.jpg",
+      "flower": "images/hydrangea/little-spooky_flower.jpg",
+      "stages": []
     },
-    {
-      "id": "touch-of-pink",
-      "slug": "touch-of-pink",
-      "name": "Touch of Pink",
-      "nameRu": "Тач оф Пинк",
-      "latinName": "Hydrangea paniculata 'Touch of Pink'",
-      "type": "paniculata",
-      "typeRu": "Метельчатая",
-      "size": "S",
-      "heightCm": [70, 90],
-      "widthCm": [60, 80],
-      "light": "sun_partial",
-      "lightRu": "Солнце / полутень",
-      "watering": "moderate",
-      "wateringRu": "Умеренный",
-      "winterHardiness": 4,
-      "winterHardinessRu": "Зона 4 — зимостойкая",
-      "primorye": "excellent",
-      "primoryeNote": "Надёжно зимует в Приморье",
-      "bloomStart": "Июнь",
-      "bloomEnd": "Октябрь",
-      "bloomDescription": "Ажурные соцветия, долгое цветение",
-      "colorStages": [
-        { "stage": "Начало", "color": "белый" },
-        { "stage": "Осень", "color": "нежно-розовый" }
-      ],
-      "inflorescenceType": "panicle_lace",
-      "inflorescenceTypeRu": "Ажурная метёлка",
-      "shortDescription": "Карликовый сорт с ажурными соцветиями. Меняет цвет к осени на нежно-розовый.",
-      "features": [
-        "Ажурные, лёгкие соцветия — не давят на побеги",
-        "Компактный — хорош для небольших участков и контейнеров",
-        "Один из первых среди метельчатых начинает цвести"
-      ],
-      "forWhom": ["Маленький сад", "Контейнер", "Живая изгородь"],
-      "soil": "Слабокислая, дренированная",
-      "nameTranslation": "Прикосновение розового",
-      "images": {
-        "bush": "images/hydrangea/touch-of-pink_bush.jpg",
-        "flower": "images/hydrangea/touch-of-pink_flower.jpg",
-        "stages": []
+    "sourceUrl": "https://www.provenwinners.com/plants/hydrangea/little-spooky-hydrangea-paniculata",
+    "description": "Самый маленький метельчатый сорт в коллекции — и один из самых очаровательных. Крошечный куст 40–50 см буквально тонет в соцветиях с июля до заморозков. Бело-зелёные метёлки к осени окрашиваются в нежный розово-лиловый. Идеален для кашпо, террас и маленьких садов — там, где крупным сортам просто нет места."
+  },
+  {
+    "id": "touch-of-pink",
+    "slug": "touch-of-pink",
+    "name": "Touch of Pink",
+    "nameRu": "Тач оф Пинк",
+    "latinName": "Hydrangea paniculata 'Touch of Pink'",
+    "type": "paniculata",
+    "typeRu": "Метельчатая",
+    "size": "S",
+    "heightCm": [
+      70,
+      90
+    ],
+    "widthCm": [
+      60,
+      80
+    ],
+    "light": "sun_partial",
+    "lightRu": "Солнце / полутень",
+    "watering": "moderate",
+    "wateringRu": "Умеренный",
+    "winterHardiness": 4,
+    "winterHardinessRu": "Зона 4 — зимостойкая",
+    "primorye": "excellent",
+    "primoryeNote": "Надёжно зимует в Приморье",
+    "bloomStart": "Июнь",
+    "bloomEnd": "Октябрь",
+    "bloomDescription": "Ажурные соцветия, долгое цветение",
+    "colorStages": [
+      {
+        "stage": "Начало",
+        "color": "белый"
       },
-      "sourceUrl": ""
+      {
+        "stage": "Осень",
+        "color": "нежно-розовый"
+      }
+    ],
+    "inflorescenceType": "panicle_lace",
+    "inflorescenceTypeRu": "Ажурная метёлка",
+    "shortDescription": "Карликовый сорт с ажурными соцветиями. Меняет цвет к осени на нежно-розовый.",
+    "features": [
+      "Цветёт с июня до октября — один из самых долгих",
+      "Соцветия с тонким ароматом — редкость среди метельчатых",
+      "Белый → розовый → малиновый — три сезона в одном кусте",
+      "Компактный 80 см — подходит для небольших садов",
+      "Хорошо сочетается с розами, пионами, хостами"
+    ],
+    "forWhom": [
+      "Миксбордер",
+      "Живая изгородь",
+      "Зона отдыха",
+      "Вход в дом"
+    ],
+    "soil": "Слабокислая, дренированная",
+    "nameTranslation": "Прикосновение розового",
+    "images": {
+      "bush": "images/hydrangea/touch-of-pink_bush.jpg",
+      "flower": "images/hydrangea/touch-of-pink_flower.jpg",
+      "stages": []
     },
-    {
-      "id": "bobo",
-      "slug": "bobo",
-      "name": "Bobo",
-      "nameRu": "Бобо",
-      "latinName": "Hydrangea paniculata 'Bobo'",
-      "type": "paniculata",
-      "typeRu": "Метельчатая",
-      "size": "S",
-      "heightCm": [60, 75],
-      "widthCm": [90, 120],
-      "light": "sun_partial",
-      "lightRu": "Солнце / полутень",
-      "watering": "moderate",
-      "wateringRu": "Умеренный",
-      "winterHardiness": 3,
-      "winterHardinessRu": "Зона 3 — очень зимостойкая",
-      "primorye": "excellent",
-      "primoryeNote": "Один из лучших выборов для Приморья — исключительная зимостойкость",
-      "bloomStart": "Август",
-      "bloomEnd": "Октябрь",
-      "bloomDescription": "Плотные белые соцветия, держатся долго, к осени слегка розовеют",
-      "colorStages": [
-        { "stage": "Начало", "color": "белый" },
-        { "stage": "Осень", "color": "бледно-розовый" }
-      ],
-      "inflorescenceType": "panicle_dense",
-      "inflorescenceTypeRu": "Плотная метёлка",
-      "shortDescription": "Один из самых известных и надёжных мини-сортов. Широкий раскидистый куст, поэтому ширина важнее высоты.",
-      "features": [
-        "Куст шире, чем высокий — учитывайте при посадке",
-        "Исключительная зимостойкость — зона 3",
-        "Плотные соцветия хорошо держат форму",
-        "Один из самых продаваемых мини-сортов в мире"
-      ],
-      "forWhom": ["Маленький сад", "Бордюр", "Начинающий садовод"],
-      "soil": "Слабокислая, хорошо дренированная",
-      "nameTranslation": "Игривое имя без конкретного перевода",
-      "images": {
-        "bush": "images/hydrangea/bobo_bush.jpg",
-        "flower": "images/hydrangea/bobo_flower.jpg",
-        "stages": []
+    "sourceUrl": "",
+    "description": "Компактный сорт с характером — белоснежные конические соцветия с тонким ароматом цветут с июня до октября. К осени они мягко розовеют и становятся малиновыми — куст меняется весь сезон. Высота 80 см, крона до 1 м. Прочные побеги, хороший иммунитет. Один из лучших для миксбордеров и живых изгородей."
+  },
+  {
+    "id": "bobo",
+    "slug": "bobo",
+    "name": "Bobo",
+    "nameRu": "Бобо",
+    "latinName": "Hydrangea paniculata 'Bobo'",
+    "type": "paniculata",
+    "typeRu": "Метельчатая",
+    "size": "S",
+    "heightCm": [
+      60,
+      75
+    ],
+    "widthCm": [
+      90,
+      120
+    ],
+    "light": "sun_partial",
+    "lightRu": "Солнце / полутень",
+    "watering": "moderate",
+    "wateringRu": "Умеренный",
+    "winterHardiness": 3,
+    "winterHardinessRu": "Зона 3 — очень зимостойкая",
+    "primorye": "excellent",
+    "primoryeNote": "Один из лучших выборов для Приморья — исключительная зимостойкость",
+    "bloomStart": "Август",
+    "bloomEnd": "Октябрь",
+    "bloomDescription": "Плотные белые соцветия, держатся долго, к осени слегка розовеют",
+    "colorStages": [
+      {
+        "stage": "Начало",
+        "color": "белый"
       },
-      "sourceUrl": "https://www.provenwinners.com/plants/hydrangea/bobo-hydrangea-paniculata"
+      {
+        "stage": "Осень",
+        "color": "бледно-розовый"
+      }
+    ],
+    "inflorescenceType": "panicle_dense",
+    "inflorescenceTypeRu": "Плотная метёлка",
+    "shortDescription": "Один из самых известных и надёжных мини-сортов. Широкий раскидистый куст, поэтому ширина важнее высоты.",
+    "features": [
+      "Куст всего 80 см в диаметре — идеален для бордюра",
+      "Цветёт с июля до сентября — обильно и продолжительно",
+      "Морозостойкость зона 3 — зимует без укрытия",
+      "Устойчив к болезням и вредителям",
+      "Отлично сочетается с хвойниками и другими гортензиями"
+    ],
+    "forWhom": [
+      "Бордюр",
+      "Небольшой сад",
+      "Патио",
+      "Начинающий садовод"
+    ],
+    "soil": "Слабокислая, хорошо дренированная",
+    "nameTranslation": "Игривое имя без конкретного перевода",
+    "images": {
+      "bush": "images/hydrangea/bobo_bush.jpg",
+      "flower": "images/hydrangea/bobo_flower.jpg",
+      "stages": []
     },
-    {
-      "id": "little-blossom",
-      "slug": "little-blossom",
-      "name": "Little Blossom",
-      "nameRu": "Литтл Блоссом",
-      "latinName": "Hydrangea paniculata 'Little Blossom'",
-      "type": "paniculata",
-      "typeRu": "Метельчатая",
-      "size": "S",
-      "heightCm": [60, 80],
-      "widthCm": [60, 80],
-      "light": "sun_partial",
-      "lightRu": "Солнце / полутень",
-      "watering": "moderate",
-      "wateringRu": "Умеренный",
-      "winterHardiness": 4,
-      "winterHardinessRu": "Зона 4 — зимостойкая",
-      "primorye": "excellent",
-      "primoryeNote": "Надёжна в условиях Приморья",
-      "bloomStart": "Июнь",
-      "bloomEnd": "Сентябрь",
-      "bloomDescription": "Долгое цветение с июня, белые соцветия постепенно розовеют",
-      "colorStages": [
-        { "stage": "Начало", "color": "белый" },
-        { "stage": "Осень", "color": "нежно-розовый" }
-      ],
-      "inflorescenceType": "panicle",
-      "inflorescenceTypeRu": "Метёлка",
-      "shortDescription": "Компактный и очень декоративный сорт. Один из самых ранних среди мини-метельчатых.",
-      "features": [
-        "Раннее начало цветения для метельчатой",
-        "Компактная симметричная форма куста",
-        "Хорошо смотрится в групповых посадках"
-      ],
-      "forWhom": ["Маленький сад", "Контейнер", "Групповая посадка"],
-      "soil": "Слабокислая, питательная",
-      "nameTranslation": "Маленький цветок",
-      "images": {
-        "bush": "images/hydrangea/little-blossom_bush.jpg",
-        "flower": "images/hydrangea/little-blossom_flower.jpg",
-        "stages": []
+    "sourceUrl": "https://www.provenwinners.com/plants/hydrangea/bobo-hydrangea-paniculata",
+    "description": "Самый продаваемый мини-сорт в мире — и не зря. Компактный куст 80 см в диаметре с прочными побегами покрывается пышными белыми метёлками с начала июля. К осени они нежно розовеют. Ажурный, лёгкий, невероятно декоративный. Морозостоек до -34°C — один из самых надёжных для Приморья."
+  },
+  {
+    "id": "little-blossom",
+    "slug": "little-blossom",
+    "name": "Little Blossom",
+    "nameRu": "Литтл Блоссом",
+    "latinName": "Hydrangea paniculata 'Little Blossom'",
+    "type": "paniculata",
+    "typeRu": "Метельчатая",
+    "size": "S",
+    "heightCm": [
+      60,
+      80
+    ],
+    "widthCm": [
+      60,
+      80
+    ],
+    "light": "sun_partial",
+    "lightRu": "Солнце / полутень",
+    "watering": "moderate",
+    "wateringRu": "Умеренный",
+    "winterHardiness": 4,
+    "winterHardinessRu": "Зона 4 — зимостойкая",
+    "primorye": "excellent",
+    "primoryeNote": "Надёжна в условиях Приморья",
+    "bloomStart": "Июнь",
+    "bloomEnd": "Сентябрь",
+    "bloomDescription": "Долгое цветение с июня, белые соцветия постепенно розовеют",
+    "colorStages": [
+      {
+        "stage": "Начало",
+        "color": "белый"
       },
-      "sourceUrl": ""
+      {
+        "stage": "Осень",
+        "color": "нежно-розовый"
+      }
+    ],
+    "inflorescenceType": "panicle",
+    "inflorescenceTypeRu": "Метёлка",
+    "shortDescription": "Компактный и очень декоративный сорт. Один из самых ранних среди мини-метельчатых.",
+    "features": [
+      "Тёмно-зелёные листья подчёркивают белизну соцветий",
+      "Очень компактный — высота 80 см, ширина 70 см",
+      "Цветки белые, постепенно розовеют к осени",
+      "Зона 4 — до -29°C",
+      "Аккуратная форма куста без обрезки"
+    ],
+    "forWhom": [
+      "Маленький сад",
+      "Контейнер",
+      "Групповая посадка"
+    ],
+    "soil": "Слабокислая, питательная",
+    "nameTranslation": "Маленький цветок",
+    "images": {
+      "bush": "images/hydrangea/little-blossom_bush.jpg",
+      "flower": "images/hydrangea/little-blossom_flower.jpg",
+      "stages": []
     },
-    {
-      "id": "bombshell",
-      "slug": "bombshell",
-      "name": "Bombshell",
-      "nameRu": "Бомбшелл",
-      "latinName": "Hydrangea paniculata 'Bombshell'",
-      "type": "paniculata",
-      "typeRu": "Метельчатая",
-      "size": "S",
-      "heightCm": [60, 90],
-      "widthCm": [90, 120],
-      "light": "sun_partial",
-      "lightRu": "Солнце / полутень",
-      "watering": "moderate",
-      "wateringRu": "Умеренный",
-      "winterHardiness": 3,
-      "winterHardinessRu": "Зона 3 — очень зимостойкая",
-      "primorye": "excellent",
-      "primoryeNote": "Отличный выбор для Приморья — зимостойкость как у Bobo",
-      "bloomStart": "Июль",
-      "bloomEnd": "Сентябрь",
-      "bloomDescription": "Огромные плотные белые соцветия на компактном кусте",
-      "colorStages": [
-        { "stage": "Начало", "color": "белый" },
-        { "stage": "Осень", "color": "кремово-белый" }
-      ],
-      "inflorescenceType": "panicle_dense",
-      "inflorescenceTypeRu": "Крупная плотная метёлка",
-      "shortDescription": "Огромные соцветия на маленьком кусте — эффект взрыва цветения. Куст шире высоты.",
-      "features": [
-        "Соцветия непропорционально крупные для такого небольшого куста",
-        "Очень эффектен в одиночной посадке",
-        "Широкий приземистый куст — учитывайте место",
-        "Зона зимостойкости 3 — очень надёжен"
-      ],
-      "forWhom": ["Акцентная посадка", "Маленький сад", "Начинающий садовод"],
-      "soil": "Слабокислая, дренированная",
-      "nameTranslation": "Бомба / взрыв — намёк на взрывное цветение",
-      "images": {
-        "bush": "images/hydrangea/bombshell_bush.jpg",
-        "flower": "images/hydrangea/bombshell_flower.jpg",
-        "stages": []
+    "sourceUrl": "",
+    "description": "Очень компактный сорт с тёмными насыщенно-зелёными листьями — на этом фоне белые соцветия выглядят особенно эффектно. Высота куста 80 см, ширина 70 см. Цветёт в июле-сентябре, цветки постепенно розовеют. Зона 4 — до -29°C. Один из самых аккуратных и компактных сортов коллекции."
+  },
+  {
+    "id": "bombshell",
+    "slug": "bombshell",
+    "name": "Bombshell",
+    "nameRu": "Бомбшелл",
+    "latinName": "Hydrangea paniculata 'Bombshell'",
+    "type": "paniculata",
+    "typeRu": "Метельчатая",
+    "size": "S",
+    "heightCm": [
+      60,
+      90
+    ],
+    "widthCm": [
+      90,
+      120
+    ],
+    "light": "sun_partial",
+    "lightRu": "Солнце / полутень",
+    "watering": "moderate",
+    "wateringRu": "Умеренный",
+    "winterHardiness": 3,
+    "winterHardinessRu": "Зона 3 — очень зимостойкая",
+    "primorye": "excellent",
+    "primoryeNote": "Отличный выбор для Приморья — зимостойкость как у Bobo",
+    "bloomStart": "Июль",
+    "bloomEnd": "Сентябрь",
+    "bloomDescription": "Огромные плотные белые соцветия на компактном кусте",
+    "colorStages": [
+      {
+        "stage": "Начало",
+        "color": "белый"
       },
-      "sourceUrl": "https://www.provenwinners.com/plants/hydrangea/bombshell-hydrangea-paniculata"
+      {
+        "stage": "Осень",
+        "color": "кремово-белый"
+      }
+    ],
+    "inflorescenceType": "panicle_dense",
+    "inflorescenceTypeRu": "Крупная плотная метёлка",
+    "shortDescription": "Огромные соцветия на маленьком кусте — эффект взрыва цветения. Куст шире высоты.",
+    "features": [
+      "Соцветия до 15 см — крупные для такого компактного куста",
+      "Цветёт с июля до середины сентября",
+      "Морозостойкость до -32°C — зона 3",
+      "Изящно склоняющиеся побеги — природный каскадный эффект",
+      "Отлично сочетается с астильбой, хостами, пионами"
+    ],
+    "forWhom": [
+      "Бордюр",
+      "Миксбордер",
+      "Небольшой сад",
+      "Начинающий садовод"
+    ],
+    "soil": "Слабокислая, дренированная",
+    "nameTranslation": "Бомба / взрыв — намёк на взрывное цветение",
+    "images": {
+      "bush": "images/hydrangea/bombshell_bush.jpg",
+      "flower": "images/hydrangea/bombshell_flower.jpg",
+      "stages": []
     },
-    {
-      "id": "cotton-cream",
-      "slug": "cotton-cream",
-      "name": "Cotton Cream",
-      "nameRu": "Коттон Крим",
-      "latinName": "Hydrangea paniculata 'Cotton Cream'",
-      "type": "paniculata",
-      "typeRu": "Метельчатая",
-      "size": "M",
-      "heightCm": [100, 150],
-      "widthCm": [100, 130],
-      "light": "sun_partial",
-      "lightRu": "Солнце / полутень",
-      "watering": "moderate",
-      "wateringRu": "Умеренный",
-      "winterHardiness": 4,
-      "winterHardinessRu": "Зона 4 — зимостойкая",
-      "primorye": "good",
-      "primoryeNote": "Хорошо подходит для Приморья",
-      "bloomStart": "Июль",
-      "bloomEnd": "Октябрь",
-      "bloomDescription": "Кремово-белые соцветия, долгое цветение",
-      "colorStages": [
-        { "stage": "Начало", "color": "кремово-белый" },
-        { "stage": "Осень", "color": "розово-кремовый" }
-      ],
-      "inflorescenceType": "panicle",
-      "inflorescenceTypeRu": "Метёлка",
-      "shortDescription": "Нежный кремовый оттенок соцветий — мягче, чем у большинства белых сортов. Средний по размеру.",
-      "features": [
-        "Тёплый кремовый оттенок вместо холодного белого",
-        "Хорошо сочетается с другими растениями в миксбордере",
-        "Долгое декоративное цветение"
-      ],
-      "forWhom": ["Миксбордер", "Средний сад", "Срезка"],
-      "soil": "Слабокислая, питательная",
-      "nameTranslation": "Хлопковый крем — отсылка к текстуре и цвету",
-      "images": {
-        "bush": "images/hydrangea/cotton-cream_bush.jpg",
-        "flower": "images/hydrangea/cotton-cream_flower.jpg",
-        "stages": []
+    "sourceUrl": "https://www.provenwinners.com/plants/hydrangea/bombshell-hydrangea-paniculata",
+    "description": "Шедевр голландской селекции. Компактный куст до 90 см с шаровидной кроной буквально взрывается крупными округло-пирамидальными соцветиями до 15 см. В начале — кремово-белые с фисташковым, к осени — ярко-розовые. Крайние побеги изящно склоняются к земле. Морозостойкость до -32°C — надёжен даже в суровые зимы."
+  },
+  {
+    "id": "cotton-cream",
+    "slug": "cotton-cream",
+    "name": "Cotton Cream",
+    "nameRu": "Коттон Крим",
+    "latinName": "Hydrangea paniculata 'Cotton Cream'",
+    "type": "paniculata",
+    "typeRu": "Метельчатая",
+    "size": "M",
+    "heightCm": [
+      100,
+      150
+    ],
+    "widthCm": [
+      100,
+      130
+    ],
+    "light": "sun_partial",
+    "lightRu": "Солнце / полутень",
+    "watering": "moderate",
+    "wateringRu": "Умеренный",
+    "winterHardiness": 4,
+    "winterHardinessRu": "Зона 4 — зимостойкая",
+    "primorye": "good",
+    "primoryeNote": "Хорошо подходит для Приморья",
+    "bloomStart": "Июль",
+    "bloomEnd": "Октябрь",
+    "bloomDescription": "Кремово-белые соцветия, долгое цветение",
+    "colorStages": [
+      {
+        "stage": "Начало",
+        "color": "кремово-белый"
       },
-      "sourceUrl": ""
+      {
+        "stage": "Осень",
+        "color": "розово-кремовый"
+      }
+    ],
+    "inflorescenceType": "panicle",
+    "inflorescenceTypeRu": "Метёлка",
+    "shortDescription": "Нежный кремовый оттенок соцветий — мягче, чем у большинства белых сортов. Средний по размеру.",
+    "features": [
+      "Кремово-белый цвет — мягче и теплее чем у белых сортов",
+      "Ветви склоняются под весом соцветий — природный каскад",
+      "Компактный 80 см — для контейнера и небольшого сада",
+      "Хорошо стоит в срезке",
+      "Морозостоек, молодые саженцы укрывать на зиму"
+    ],
+    "forWhom": [
+      "Контейнер",
+      "Срезка",
+      "Берег водоёма",
+      "Небольшой сад"
+    ],
+    "soil": "Слабокислая, питательная",
+    "nameTranslation": "Хлопковый крем — отсылка к текстуре и цвету",
+    "images": {
+      "bush": "images/hydrangea/cotton-cream_bush.jpg",
+      "flower": "images/hydrangea/cotton-cream_flower.jpg",
+      "stages": []
     },
-    {
-      "id": "samarskaya-lidiya",
-      "slug": "samarskaya-lidiya",
-      "name": "Самарская Лидия",
-      "nameRu": "Самарская Лидия",
-      "latinName": "Hydrangea paniculata 'Samarskaya Lidiya'",
-      "type": "paniculata",
-      "typeRu": "Метельчатая",
-      "size": "M",
-      "heightCm": [100, 130],
-      "widthCm": [100, 120],
-      "light": "sun_partial",
-      "lightRu": "Солнце / полутень",
-      "watering": "moderate",
-      "wateringRu": "Умеренный",
-      "winterHardiness": 3,
-      "winterHardinessRu": "Зона 3 — очень зимостойкая",
-      "primorye": "excellent",
-      "primoryeNote": "Российская селекция — специально выведена для сурового климата",
-      "bloomStart": "Июль",
-      "bloomEnd": "Октябрь",
-      "bloomDescription": "Очень яркая смена окраски — от белого до рубинового",
-      "colorStages": [
-        { "stage": "Начало", "color": "белый" },
-        { "stage": "Середина", "color": "розовый" },
-        { "stage": "Осень", "color": "рубиново-красный" }
-      ],
-      "inflorescenceType": "panicle_dense",
-      "inflorescenceTypeRu": "Плотная метёлка",
-      "shortDescription": "Российская селекция. Самая яркая смена цвета среди метельчатых — от белого до рубинового. Крепкие прямостоячие побеги.",
-      "features": [
-        "Российская селекция — адаптирована к суровому климату",
-        "Рекордная смена окраски: белый → розовый → рубиновый",
-        "Крепкие побеги не полегают даже под тяжёлыми соцветиями",
-        "Зона 3 — одна из самых зимостойких"
-      ],
-      "forWhom": ["Любой сад в Приморье", "Акцентная посадка", "Начинающий садовод"],
-      "soil": "Слабокислая, хорошо дренированная",
-      "nameTranslation": "Названа в честь города Самара — место выведения",
-      "images": {
-        "bush": "images/hydrangea/samarskaya-lidiya_bush.jpg",
-        "flower": "images/hydrangea/samarskaya-lidiya_flower.jpg",
-        "stages": [
-          "images/hydrangea/samarskaya-lidiya_stage1.jpg",
-          "images/hydrangea/samarskaya-lidiya_stage2.jpg",
-          "images/hydrangea/samarskaya-lidiya_stage3.jpg"
-        ]
+    "sourceUrl": "",
+    "description": "Нежность в каждом соцветии. Пышные кремово-белые метёлки напоминают взбитые сливки — плотные, объёмные, с лёгким зеленоватым оттенком в начале. Ветви изящно склоняются под их весом. К осени соцветия розовеют. Высота куста всего 80 см — подходит даже для контейнера на балконе или берега водоёма."
+  },
+  {
+    "id": "samarskaya-lidiya",
+    "slug": "samarskaya-lidiya",
+    "name": "Самарская Лидия",
+    "nameRu": "Самарская Лидия",
+    "latinName": "Hydrangea paniculata 'Samarskaya Lidiya'",
+    "type": "paniculata",
+    "typeRu": "Метельчатая",
+    "size": "M",
+    "heightCm": [
+      100,
+      130
+    ],
+    "widthCm": [
+      100,
+      120
+    ],
+    "light": "sun_partial",
+    "lightRu": "Солнце / полутень",
+    "watering": "moderate",
+    "wateringRu": "Умеренный",
+    "winterHardiness": 3,
+    "winterHardinessRu": "Зона 3 — очень зимостойкая",
+    "primorye": "excellent",
+    "primoryeNote": "Российская селекция — специально выведена для сурового климата",
+    "bloomStart": "Июль",
+    "bloomEnd": "Октябрь",
+    "bloomDescription": "Очень яркая смена окраски — от белого до рубинового",
+    "colorStages": [
+      {
+        "stage": "Начало",
+        "color": "белый"
       },
-      "sourceUrl": ""
+      {
+        "stage": "Середина",
+        "color": "розовый"
+      },
+      {
+        "stage": "Осень",
+        "color": "рубиново-красный"
+      }
+    ],
+    "inflorescenceType": "panicle_dense",
+    "inflorescenceTypeRu": "Плотная метёлка",
+    "shortDescription": "Российская селекция. Самая яркая смена цвета среди метельчатых — от белого до рубинового. Крепкие прямостоячие побеги.",
+    "features": [
+      "Белый → розовый → рубиновый — рекордная смена окраски",
+      "Российская селекция — адаптирована к суровому климату",
+      "Крепкие побеги не полегают под тяжёлыми соцветиями",
+      "Зона 3 — одна из самых зимостойких",
+      "Рубиновый цвет держится до самых заморозков"
+    ],
+    "forWhom": [
+      "Любой сад Приморья",
+      "Акцентная посадка",
+      "Срезка"
+    ],
+    "soil": "Слабокислая, хорошо дренированная",
+    "nameTranslation": "Названа в честь города Самара — место выведения",
+    "images": {
+      "bush": "images/hydrangea/samarskaya-lidiya_bush.jpg",
+      "flower": "images/hydrangea/samarskaya-lidiya_flower.jpg",
+      "stages": [
+        "images/hydrangea/samarskaya-lidiya_stage1.jpg",
+        "images/hydrangea/samarskaya-lidiya_stage2.jpg",
+        "images/hydrangea/samarskaya-lidiya_stage3.jpg"
+      ]
     },
-    {
-      "id": "strawberry-blossom",
-      "slug": "strawberry-blossom",
-      "name": "Strawberry Blossom",
-      "nameRu": "Стробери Блоссом",
-      "latinName": "Hydrangea paniculata 'Strawberry Blossom'",
-      "type": "paniculata",
-      "typeRu": "Метельчатая",
-      "size": "M",
-      "heightCm": [100, 150],
-      "widthCm": [100, 130],
-      "light": "sun_partial",
-      "lightRu": "Солнце / полутень",
-      "watering": "moderate",
-      "wateringRu": "Умеренный",
-      "winterHardiness": 4,
-      "winterHardinessRu": "Зона 4 — зимостойкая",
-      "primorye": "excellent",
-      "primoryeNote": "Хорошо зимует в Приморье",
-      "bloomStart": "Июль",
-      "bloomEnd": "Октябрь",
-      "bloomDescription": "Один из самых ярко-розовых метельчатых сортов",
-      "colorStages": [
-        { "stage": "Начало", "color": "светло-зелёный" },
-        { "stage": "Середина", "color": "ярко-розовый" },
-        { "stage": "Осень", "color": "малиново-красный" }
-      ],
-      "inflorescenceType": "panicle",
-      "inflorescenceTypeRu": "Метёлка",
-      "shortDescription": "Один из самых «малиновых» метельчатых сортов. Яркий финальный цвет — почти красный.",
-      "features": [
-        "Самый насыщенный розово-малиновый финальный цвет среди метельчатых",
-        "Соцветия крупные, плотные",
-        "Хорошо смотрится в срезке на разных стадиях"
-      ],
-      "forWhom": ["Яркий акцент", "Срезка", "Средний и большой сад"],
-      "soil": "Слабокислая, питательная, дренированная",
-      "nameTranslation": "Клубничный цветок — по цвету финальной окраски",
-      "images": {
-        "bush": "images/hydrangea/strawberry-blossom_bush.jpg",
-        "flower": "images/hydrangea/strawberry-blossom_flower.jpg",
-        "stages": []
+    "sourceUrl": "",
+    "description": "Гордость российской селекции. Самая яркая смена окраски среди всех метельчатых — от чисто белого через розовый до насыщенного рубинового. Куст 100–130 см с крепкими прямостоячими побегами — не полегает даже под тяжёлыми соцветиями. Зона 3 — выведена специально для сурового климата. Лучший выбор для Приморья."
+  },
+  {
+    "id": "strawberry-blossom",
+    "slug": "strawberry-blossom",
+    "name": "Strawberry Blossom",
+    "nameRu": "Стробери Блоссом",
+    "latinName": "Hydrangea paniculata 'Strawberry Blossom'",
+    "type": "paniculata",
+    "typeRu": "Метельчатая",
+    "size": "M",
+    "heightCm": [
+      100,
+      150
+    ],
+    "widthCm": [
+      100,
+      130
+    ],
+    "light": "sun_partial",
+    "lightRu": "Солнце / полутень",
+    "watering": "moderate",
+    "wateringRu": "Умеренный",
+    "winterHardiness": 4,
+    "winterHardinessRu": "Зона 4 — зимостойкая",
+    "primorye": "excellent",
+    "primoryeNote": "Хорошо зимует в Приморье",
+    "bloomStart": "Июль",
+    "bloomEnd": "Октябрь",
+    "bloomDescription": "Один из самых ярко-розовых метельчатых сортов",
+    "colorStages": [
+      {
+        "stage": "Начало",
+        "color": "светло-зелёный"
       },
-      "sourceUrl": ""
+      {
+        "stage": "Середина",
+        "color": "ярко-розовый"
+      },
+      {
+        "stage": "Осень",
+        "color": "малиново-красный"
+      }
+    ],
+    "inflorescenceType": "panicle",
+    "inflorescenceTypeRu": "Метёлка",
+    "shortDescription": "Один из самых «малиновых» метельчатых сортов. Яркий финальный цвет — почти красный.",
+    "features": [
+      "Самый насыщенный малиновый цвет среди метельчатых",
+      "Белый кончик соцветия — фирменный знак сорта",
+      "Куст 120 см с крепкими не полегающими побегами",
+      "Отлично подходит для срезки на любой стадии",
+      "Хороший иммунитет и морозостойкость"
+    ],
+    "forWhom": [
+      "Одиночная посадка",
+      "Срезка",
+      "Живая изгородь",
+      "Берег водоёма"
+    ],
+    "soil": "Слабокислая, питательная, дренированная",
+    "nameTranslation": "Клубничный цветок — по цвету финальной окраски",
+    "images": {
+      "bush": "images/hydrangea/strawberry-blossom_bush.jpg",
+      "flower": "images/hydrangea/strawberry-blossom_flower.jpg",
+      "stages": []
     },
-    {
-      "id": "vanille-fraise",
-      "slug": "vanille-fraise",
-      "name": "Vanille Fraise",
-      "nameRu": "Ваниль Фрез",
-      "latinName": "Hydrangea paniculata 'Vanille Fraise'",
-      "type": "paniculata",
-      "typeRu": "Метельчатая",
-      "size": "L",
-      "heightCm": [150, 200],
-      "widthCm": [130, 180],
-      "light": "sun_partial",
-      "lightRu": "Солнце / полутень",
-      "watering": "moderate",
-      "wateringRu": "Умеренный",
-      "winterHardiness": 4,
-      "winterHardinessRu": "Зона 4 — зимостойкая",
-      "primorye": "excellent",
-      "primoryeNote": "Классика для Приморья — зимостойкая и эффектная",
-      "bloomStart": "Июль",
-      "bloomEnd": "Сентябрь",
-      "bloomDescription": "Классический двухцветный эффект: белый верх и розовый низ одновременно",
-      "colorStages": [
-        { "stage": "Начало", "color": "белый" },
-        { "stage": "Середина", "color": "белый + розовый двухцветный" },
-        { "stage": "Осень", "color": "насыщенно клубничный" }
-      ],
-      "inflorescenceType": "panicle_large",
-      "inflorescenceTypeRu": "Крупная метёлка",
-      "shortDescription": "Классика французской селекции. Эффектный двухцветный окрас — белый и клубничный одновременно.",
-      "features": [
-        "Одновременный двухцветный эффект на одном соцветии",
-        "Один из самых узнаваемых сортов в мире",
-        "Крупный куст с мощными побегами",
-        "Отлично подходит для срезки"
-      ],
-      "forWhom": ["Большой сад", "Акцентная посадка", "Срезка"],
-      "soil": "Слабокислая, питательная",
-      "nameTranslation": "Ваниль и клубника — по двум цветам соцветия",
-      "images": {
-        "bush": "images/hydrangea/vanille-fraise_bush.jpg",
-        "flower": "images/hydrangea/vanille-fraise_flower.jpg",
-        "stages": [
-          "images/hydrangea/vanille-fraise_stage1.jpg",
-          "images/hydrangea/vanille-fraise_stage2.jpg"
-        ]
+    "sourceUrl": "",
+    "description": "Самый малиновый из всех метельчатых. Куст 120 см с крепкими побегами и раскидистой кроной. Соцветия пышные, конусовидные — начинают сливочно-белыми, розовеют у основания, а финальный цвет — яркий малиновый. Изюминка сорта: кончик соцветия всегда остаётся белым, создавая эффектный контраст. Цветёт с июля до сентября."
+  },
+  {
+    "id": "vanille-fraise",
+    "slug": "vanille-fraise",
+    "name": "Vanille Fraise",
+    "nameRu": "Ваниль Фрез",
+    "latinName": "Hydrangea paniculata 'Vanille Fraise'",
+    "type": "paniculata",
+    "typeRu": "Метельчатая",
+    "size": "L",
+    "heightCm": [
+      150,
+      200
+    ],
+    "widthCm": [
+      130,
+      180
+    ],
+    "light": "sun_partial",
+    "lightRu": "Солнце / полутень",
+    "watering": "moderate",
+    "wateringRu": "Умеренный",
+    "winterHardiness": 4,
+    "winterHardinessRu": "Зона 4 — зимостойкая",
+    "primorye": "excellent",
+    "primoryeNote": "Классика для Приморья — зимостойкая и эффектная",
+    "bloomStart": "Июль",
+    "bloomEnd": "Сентябрь",
+    "bloomDescription": "Классический двухцветный эффект: белый верх и розовый низ одновременно",
+    "colorStages": [
+      {
+        "stage": "Начало",
+        "color": "белый"
       },
-      "sourceUrl": "https://www.conceptplants.nl/en/plants/hydrangea-paniculata-vanille-fraise"
+      {
+        "stage": "Середина",
+        "color": "белый + розовый двухцветный"
+      },
+      {
+        "stage": "Осень",
+        "color": "насыщенно клубничный"
+      }
+    ],
+    "inflorescenceType": "panicle_large",
+    "inflorescenceTypeRu": "Крупная метёлка",
+    "shortDescription": "Классика французской селекции. Эффектный двухцветный окрас — белый и клубничный одновременно.",
+    "features": [
+      "Соцветия до 30 см — одни из крупнейших в коллекции",
+      "Цветёт с июня до октября — рекордно долго",
+      "Белый → розовый → вишнёво-красный — полная смена палитры",
+      "Чем короче обрезка — тем крупнее соцветия",
+      "Отличная срезка — стоит в вазе долго"
+    ],
+    "forWhom": [
+      "Живая изгородь",
+      "Срезка",
+      "Большой сад",
+      "Акцентная посадка"
+    ],
+    "soil": "Слабокислая, питательная",
+    "nameTranslation": "Ваниль и клубника — по двум цветам соцветия",
+    "images": {
+      "bush": "images/hydrangea/vanille-fraise_bush.jpg",
+      "flower": "images/hydrangea/vanille-fraise_flower.jpg",
+      "stages": [
+        "images/hydrangea/vanille-fraise_stage1.jpg",
+        "images/hydrangea/vanille-fraise_stage2.jpg"
+      ]
     },
-    {
-      "id": "limelight",
-      "slug": "limelight",
-      "name": "Limelight",
-      "nameRu": "Лаймлайт",
-      "latinName": "Hydrangea paniculata 'Limelight'",
-      "type": "paniculata",
-      "typeRu": "Метельчатая",
-      "size": "L",
-      "heightCm": [180, 240],
-      "widthCm": [150, 200],
-      "light": "sun_partial",
-      "lightRu": "Солнце / полутень",
-      "watering": "moderate",
-      "wateringRu": "Умеренный",
-      "winterHardiness": 3,
-      "winterHardinessRu": "Зона 3 — очень зимостойкая",
-      "primorye": "excellent",
-      "primoryeNote": "Один из лучших крупных сортов для Приморья — проверен годами",
-      "bloomStart": "Июль",
-      "bloomEnd": "Октябрь",
-      "bloomDescription": "Начинает с уникального лаймово-зелёного, затем белеет и розовеет к осени",
-      "colorStages": [
-        { "stage": "Начало", "color": "лаймово-зелёный" },
-        { "stage": "Середина", "color": "кремово-белый" },
-        { "stage": "Осень", "color": "розово-красный" }
-      ],
-      "inflorescenceType": "panicle_large",
-      "inflorescenceTypeRu": "Крупная плотная метёлка",
-      "shortDescription": "Мировая классика. Уникальный лаймовый цвет в начале цветения. Крупный мощный куст — настоящий акцент сада.",
-      "features": [
-        "Уникальный лаймово-зелёный старт цветения — ни у кого больше нет",
-        "Один из самых популярных сортов в мире",
-        "Мощный крупный куст — до 2,4 м",
-        "Отличная срезка на всех стадиях",
-        "Зона 3 — надёжная зимостойкость"
-      ],
-      "forWhom": ["Большой сад", "Акцентная посадка", "Срезка", "Живая изгородь"],
-      "soil": "Слабокислая, питательная, хорошо дренированная",
-      "nameTranslation": "Лаймовый свет — по цвету соцветий в начале цветения",
-      "images": {
-        "bush": "images/hydrangea/limelight_bush.jpg",
-        "flower": "images/hydrangea/limelight_flower.jpg",
-        "stages": [
-          "images/hydrangea/limelight_stage1.jpg",
-          "images/hydrangea/limelight_stage2.jpg",
-          "images/hydrangea/limelight_stage3.jpg"
-        ]
+    "sourceUrl": "https://www.conceptplants.nl/en/plants/hydrangea-paniculata-vanille-fraise",
+    "description": "Французская классика с мировым именем. Куст до 2,2 м с прочными прямостоячими побегами цветёт с июня до октября. Соцветия до 30 см — белые в начале, розовеющие к середине, вишнёво-красные в финале. Совет от профессионалов: чем короче обрезка весной, тем крупнее соцветия. Идеальна для живых изгородей и срезки."
+  },
+  {
+    "id": "limelight",
+    "slug": "limelight",
+    "name": "Limelight",
+    "nameRu": "Лаймлайт",
+    "latinName": "Hydrangea paniculata 'Limelight'",
+    "type": "paniculata",
+    "typeRu": "Метельчатая",
+    "size": "L",
+    "heightCm": [
+      180,
+      240
+    ],
+    "widthCm": [
+      150,
+      200
+    ],
+    "light": "sun_partial",
+    "lightRu": "Солнце / полутень",
+    "watering": "moderate",
+    "wateringRu": "Умеренный",
+    "winterHardiness": 3,
+    "winterHardinessRu": "Зона 3 — очень зимостойкая",
+    "primorye": "excellent",
+    "primoryeNote": "Один из лучших крупных сортов для Приморья — проверен годами",
+    "bloomStart": "Июль",
+    "bloomEnd": "Октябрь",
+    "bloomDescription": "Начинает с уникального лаймово-зелёного, затем белеет и розовеет к осени",
+    "colorStages": [
+      {
+        "stage": "Начало",
+        "color": "лаймово-зелёный"
       },
-      "sourceUrl": "https://www.provenwinners.com/plants/hydrangea/limelight-hydrangea-paniculata"
+      {
+        "stage": "Середина",
+        "color": "кремово-белый"
+      },
+      {
+        "stage": "Осень",
+        "color": "розово-красный"
+      }
+    ],
+    "inflorescenceType": "panicle_large",
+    "inflorescenceTypeRu": "Крупная плотная метёлка",
+    "shortDescription": "Мировая классика. Уникальный лаймовый цвет в начале цветения. Крупный мощный куст — настоящий акцент сада.",
+    "features": [
+      "Уникальный лаймовый цвет в начале цветения — только у Limelight",
+      "Бархатистые тёмно-зелёные листья декоративны сами по себе",
+      "Нетребователен к освещению — растёт в полутени",
+      "Зона 3 — проверен годами в суровом климате",
+      "Отличная срезка на всех стадиях"
+    ],
+    "forWhom": [
+      "Любой сад",
+      "Живая изгородь",
+      "Задний план цветника",
+      "Срезка"
+    ],
+    "soil": "Слабокислая, питательная, хорошо дренированная",
+    "nameTranslation": "Лаймовый свет — по цвету соцветий в начале цветения",
+    "images": {
+      "bush": "images/hydrangea/limelight_bush.jpg",
+      "flower": "images/hydrangea/limelight_flower.jpg",
+      "stages": [
+        "images/hydrangea/limelight_stage1.jpg",
+        "images/hydrangea/limelight_stage2.jpg",
+        "images/hydrangea/limelight_stage3.jpg"
+      ]
     },
-    {
-      "id": "phantom",
-      "slug": "phantom",
-      "name": "Phantom",
-      "nameRu": "Фантом",
-      "latinName": "Hydrangea paniculata 'Phantom'",
-      "type": "paniculata",
-      "typeRu": "Метельчатая",
-      "size": "L",
-      "heightCm": [200, 250],
-      "widthCm": [180, 220],
-      "light": "sun_partial",
-      "lightRu": "Солнце / полутень",
-      "watering": "moderate",
-      "wateringRu": "Умеренный",
-      "winterHardiness": 4,
-      "winterHardinessRu": "Зона 4 — зимостойкая",
-      "primorye": "excellent",
-      "primoryeNote": "Надёжно зимует в Приморье, один из крупнейших сортов",
-      "bloomStart": "Июль",
-      "bloomEnd": "Октябрь",
-      "bloomDescription": "Одни из крупнейших соцветий среди метельчатых — до 40 см",
-      "colorStages": [
-        { "stage": "Начало", "color": "белый с кремовым" },
-        { "stage": "Осень", "color": "розово-красный" }
-      ],
-      "inflorescenceType": "panicle_giant",
-      "inflorescenceTypeRu": "Гигантская метёлка",
-      "shortDescription": "Самые крупные соцветия среди метельчатых — до 40 см. Мощный раскидистый куст для большого сада.",
-      "features": [
-        "Рекордно крупные соцветия — до 40 см в длину",
-        "Мощный широкий куст — нужно много места",
-        "Долгое цветение",
-        "Эффектен как солитёр"
-      ],
-      "forWhom": ["Большой сад", "Акцентный солитёр", "Срезка крупных соцветий"],
-      "soil": "Слабокислая, питательная, глубокая",
-      "nameTranslation": "Призрак — намёк на воздушность огромных белых соцветий",
-      "images": {
-        "bush": "images/hydrangea/phantom_bush.jpg",
-        "flower": "images/hydrangea/phantom_flower.jpg",
-        "stages": []
+    "sourceUrl": "https://www.provenwinners.com/plants/hydrangea/limelight-hydrangea-paniculata",
+    "description": "Легенда среди гортензий. Плотный куст с бархатистыми тёмно-зелёными листьями и конической кроной. Соцветия в начале — редкий лаймово-зелёный, затем лаймово-белый, к осени добавляются розовые оттенки. Цветёт с конца июля до октября. Нетребователен к освещению, морозостоек — настоящий рабочий сорт для любого сада Приморья."
+  },
+  {
+    "id": "phantom",
+    "slug": "phantom",
+    "name": "Phantom",
+    "nameRu": "Фантом",
+    "latinName": "Hydrangea paniculata 'Phantom'",
+    "type": "paniculata",
+    "typeRu": "Метельчатая",
+    "size": "L",
+    "heightCm": [
+      200,
+      250
+    ],
+    "widthCm": [
+      180,
+      220
+    ],
+    "light": "sun_partial",
+    "lightRu": "Солнце / полутень",
+    "watering": "moderate",
+    "wateringRu": "Умеренный",
+    "winterHardiness": 4,
+    "winterHardinessRu": "Зона 4 — зимостойкая",
+    "primorye": "excellent",
+    "primoryeNote": "Надёжно зимует в Приморье, один из крупнейших сортов",
+    "bloomStart": "Июль",
+    "bloomEnd": "Октябрь",
+    "bloomDescription": "Одни из крупнейших соцветий среди метельчатых — до 40 см",
+    "colorStages": [
+      {
+        "stage": "Начало",
+        "color": "белый с кремовым"
       },
-      "sourceUrl": ""
+      {
+        "stage": "Осень",
+        "color": "розово-красный"
+      }
+    ],
+    "inflorescenceType": "panicle_giant",
+    "inflorescenceTypeRu": "Гигантская метёлка",
+    "shortDescription": "Самые крупные соцветия среди метельчатых — до 40 см. Мощный раскидистый куст для большого сада.",
+    "features": [
+      "Соцветия до 40 см — самые крупные среди метельчатых",
+      "Цветёт с июля до октября — долгое декоративное цветение",
+      "Чем короче обрезка весной — тем крупнее соцветия",
+      "Эффектен в одиночной посадке на газоне",
+      "Не требователен к составу почвы"
+    ],
+    "forWhom": [
+      "Большой сад",
+      "Одиночная посадка",
+      "Срезка",
+      "Живая изгородь"
+    ],
+    "soil": "Слабокислая, питательная, глубокая",
+    "nameTranslation": "Призрак — намёк на воздушность огромных белых соцветий",
+    "images": {
+      "bush": "images/hydrangea/phantom_bush.jpg",
+      "flower": "images/hydrangea/phantom_flower.jpg",
+      "stages": []
     },
-    {
-      "id": "polar-bear",
-      "slug": "polar-bear",
-      "name": "Polar Bear",
-      "nameRu": "Полар Бэр",
-      "latinName": "Hydrangea paniculata 'Polar Bear'",
-      "type": "paniculata",
-      "typeRu": "Метельчатая",
-      "size": "L",
-      "heightCm": [180, 200],
-      "widthCm": [150, 180],
-      "light": "sun_partial",
-      "lightRu": "Солнце / полутень",
-      "watering": "moderate",
-      "wateringRu": "Умеренный",
-      "winterHardiness": 3,
-      "winterHardinessRu": "Зона 3 — очень зимостойкая",
-      "primorye": "excellent",
-      "primoryeNote": "Одна из лучших для сурового климата Приморья",
-      "bloomStart": "Июль",
-      "bloomEnd": "Октябрь",
-      "bloomDescription": "Очень крупные, чисто белоснежные соцветия на протяжении всего сезона",
-      "colorStages": [
-        { "stage": "Весь сезон", "color": "белоснежный" },
-        { "stage": "Поздняя осень", "color": "кремово-белый" }
-      ],
-      "inflorescenceType": "panicle_large",
-      "inflorescenceTypeRu": "Крупная метёлка",
-      "shortDescription": "Белоснежные крупные соцветия весь сезон. Максимальная зимостойкость для крупного сорта.",
-      "features": [
-        "Зона 3 — одна из самых зимостойких среди крупных",
-        "Чисто белый цвет держится всё лето без порозовения",
-        "Мощные, не полегающие побеги",
-        "Поздно зацветает, но компенсирует долгим цветением"
-      ],
-      "forWhom": ["Северные сады", "Большой сад", "Белый сад"],
-      "soil": "Слабокислая, дренированная",
-      "nameTranslation": "Белый медведь — по цвету и мощи куста",
-      "images": {
-        "bush": "images/hydrangea/polar-bear_bush.jpg",
-        "flower": "images/hydrangea/polar-bear_flower.jpg",
-        "stages": []
+    "sourceUrl": "",
+    "description": "Романтика и нежность в одном кусте. Высота около 2 м, округлая крона, бархатистые тёмно-зелёные листья. Цветёт с июля до октября рекордно крупными соцветиями до 40 см — настоящие белые облака. К осени чуть розовеют. Морозостоек, хорошо отзывается на обрезку — чем короче, тем крупнее соцветия."
+  },
+  {
+    "id": "polar-bear",
+    "slug": "polar-bear",
+    "name": "Polar Bear",
+    "nameRu": "Полар Бэр",
+    "latinName": "Hydrangea paniculata 'Polar Bear'",
+    "type": "paniculata",
+    "typeRu": "Метельчатая",
+    "size": "L",
+    "heightCm": [
+      180,
+      200
+    ],
+    "widthCm": [
+      150,
+      180
+    ],
+    "light": "sun_partial",
+    "lightRu": "Солнце / полутень",
+    "watering": "moderate",
+    "wateringRu": "Умеренный",
+    "winterHardiness": 3,
+    "winterHardinessRu": "Зона 3 — очень зимостойкая",
+    "primorye": "excellent",
+    "primoryeNote": "Одна из лучших для сурового климата Приморья",
+    "bloomStart": "Июль",
+    "bloomEnd": "Октябрь",
+    "bloomDescription": "Очень крупные, чисто белоснежные соцветия на протяжении всего сезона",
+    "colorStages": [
+      {
+        "stage": "Весь сезон",
+        "color": "белоснежный"
       },
-      "sourceUrl": ""
+      {
+        "stage": "Поздняя осень",
+        "color": "кремово-белый"
+      }
+    ],
+    "inflorescenceType": "panicle_large",
+    "inflorescenceTypeRu": "Крупная метёлка",
+    "shortDescription": "Белоснежные крупные соцветия весь сезон. Максимальная зимостойкость для крупного сорта.",
+    "features": [
+      "Соцветия до 40 см — выведен от Limelight и Грандифлоры",
+      "Фисташковый старт → белый → нежно-розовый",
+      "Крепкие побеги не полегают под тяжёлыми соцветиями",
+      "Устойчивость к болезням от Limelight",
+      "Молодые саженцы укрывать первые 2 года"
+    ],
+    "forWhom": [
+      "Живая изгородь",
+      "Одиночная посадка",
+      "Большой сад",
+      "Срезка"
+    ],
+    "soil": "Слабокислая, дренированная",
+    "nameTranslation": "Белый медведь — по цвету и мощи куста",
+    "images": {
+      "bush": "images/hydrangea/polar-bear_bush.jpg",
+      "flower": "images/hydrangea/polar-bear_flower.jpg",
+      "stages": []
     },
-    {
-      "id": "fraise-melba",
-      "slug": "fraise-melba",
-      "name": "Fraise Melba",
-      "nameRu": "Фрез Мельба",
-      "latinName": "Hydrangea paniculata 'Fraise Melba'",
-      "type": "paniculata",
-      "typeRu": "Метельчатая",
-      "size": "L",
-      "heightCm": [180, 220],
-      "widthCm": [150, 180],
-      "light": "sun_partial",
-      "lightRu": "Солнце / полутень",
-      "watering": "moderate",
-      "wateringRu": "Умеренный",
-      "winterHardiness": 4,
-      "winterHardinessRu": "Зона 4 — зимостойкая",
-      "primorye": "good",
-      "primoryeNote": "Хорошо подходит для Приморья",
-      "bloomStart": "Июль",
-      "bloomEnd": "Октябрь",
-      "bloomDescription": "Очень нарядные многоцветные соцветия, крупный эффектный куст",
-      "colorStages": [
-        { "stage": "Начало", "color": "белый" },
-        { "stage": "Середина", "color": "розово-клубничный" },
-        { "stage": "Осень", "color": "насыщенно розово-красный" }
-      ],
-      "inflorescenceType": "panicle_large",
-      "inflorescenceTypeRu": "Крупная метёлка",
-      "shortDescription": "Очень нарядный крупный куст. Назван в честь знаменитого десерта — такой же изысканный.",
-      "features": [
-        "Особо нарядные, многоцветные соцветия",
-        "Крупный мощный куст",
-        "Хорошо смотрится как солитёр или в группе"
-      ],
-      "forWhom": ["Большой сад", "Парадная посадка", "Срезка"],
-      "soil": "Слабокислая, питательная",
-      "nameTranslation": "Клубника Мельба — по аналогии с десертом peach Melba, только с клубникой",
-      "images": {
-        "bush": "images/hydrangea/fraise-melba_bush.jpg",
-        "flower": "images/hydrangea/fraise-melba_flower.jpg",
-        "stages": []
+    "sourceUrl": "",
+    "description": "Молодой сорт с безупречной родословной — результат скрещивания Limelight и Грандифлора. От Limelight унаследовал устойчивость к болезням, от Грандифлоры — крупные соцветия до 40 см. Фисташково-белые в начале, чисто белые в разгаре, нежно-розовые к осени. Куст до 2 м с крепкими побегами. Морозостоек."
+  },
+  {
+    "id": "fraise-melba",
+    "slug": "fraise-melba",
+    "name": "Fraise Melba",
+    "nameRu": "Фрез Мельба",
+    "latinName": "Hydrangea paniculata 'Fraise Melba'",
+    "type": "paniculata",
+    "typeRu": "Метельчатая",
+    "size": "L",
+    "heightCm": [
+      180,
+      220
+    ],
+    "widthCm": [
+      150,
+      180
+    ],
+    "light": "sun_partial",
+    "lightRu": "Солнце / полутень",
+    "watering": "moderate",
+    "wateringRu": "Умеренный",
+    "winterHardiness": 4,
+    "winterHardinessRu": "Зона 4 — зимостойкая",
+    "primorye": "good",
+    "primoryeNote": "Хорошо подходит для Приморья",
+    "bloomStart": "Июль",
+    "bloomEnd": "Октябрь",
+    "bloomDescription": "Очень нарядные многоцветные соцветия, крупный эффектный куст",
+    "colorStages": [
+      {
+        "stage": "Начало",
+        "color": "белый"
       },
-      "sourceUrl": ""
+      {
+        "stage": "Середина",
+        "color": "розово-клубничный"
+      },
+      {
+        "stage": "Осень",
+        "color": "насыщенно розово-красный"
+      }
+    ],
+    "inflorescenceType": "panicle_large",
+    "inflorescenceTypeRu": "Крупная метёлка",
+    "shortDescription": "Очень нарядный крупный куст. Назван в честь знаменитого десерта — такой же изысканный.",
+    "features": [
+      "Белая верхушка + малиновый низ — фирменный контраст",
+      "Крупные пирамидальные соцветия",
+      "Французская селекция — проверенное качество",
+      "Морозостоек, устойчив к болезням",
+      "Эффектно сочетается с флоксами и рододендронами"
+    ],
+    "forWhom": [
+      "Ландшафтная композиция",
+      "Одиночная посадка",
+      "Зона отдыха"
+    ],
+    "soil": "Слабокислая, питательная",
+    "nameTranslation": "Клубника Мельба — по аналогии с десертом peach Melba, только с клубникой",
+    "images": {
+      "bush": "images/hydrangea/fraise-melba_bush.jpg",
+      "flower": "images/hydrangea/fraise-melba_flower.jpg",
+      "stages": []
     },
-    {
-      "id": "annabelle",
-      "slug": "annabelle",
-      "name": "Анабель",
-      "nameRu": "Анабель",
-      "latinName": "Hydrangea arborescens 'Annabelle'",
-      "type": "arborescens",
-      "typeRu": "Древовидная",
-      "size": "M",
-      "heightCm": [100, 150],
-      "widthCm": [150, 200],
-      "light": "partial_shade",
-      "lightRu": "Полутень / тень",
-      "watering": "moderate_high",
-      "wateringRu": "Умеренный — обильный",
-      "winterHardiness": 3,
-      "winterHardinessRu": "Зона 3 — очень зимостойкая",
-      "primorye": "good",
-      "primoryeNote": "Зимует хорошо, но побеги могут подмерзать — цветёт на побегах текущего года, поэтому это не проблема",
-      "bloomStart": "Июль",
-      "bloomEnd": "Сентябрь",
-      "bloomDescription": "Огромные шаровидные белые соцветия — до 30 см в диаметре",
-      "colorStages": [
-        { "stage": "Начало", "color": "светло-зелёный" },
-        { "stage": "Середина", "color": "белый" },
-        { "stage": "Осень", "color": "зеленовато-бежевый" }
-      ],
-      "inflorescenceType": "ball",
-      "inflorescenceTypeRu": "Шар",
-      "shortDescription": "Классическая древовидная гортензия. Огромные белые шары соцветий. Цветёт даже после обмерзания побегов.",
-      "features": [
-        "Цветёт на побегах текущего года — надёжна даже после морозов",
-        "Очень широкий куст — шире высоты",
-        "Соцветия могут полегать под дождём — нужна опора или обрезка",
-        "Переносит больше тени, чем метельчатые",
-        "Зона 3 — исключительная зимостойкость"
-      ],
-      "forWhom": ["Тенистый сад", "Большой сад", "Начинающий садовод"],
-      "soil": "Слабокислая, богатая, хорошо удерживающая влагу",
-      "nameTranslation": "Женское имя Аннабель",
-      "images": {
-        "bush": "images/hydrangea/annabelle_bush.jpg",
-        "flower": "images/hydrangea/annabelle_flower.jpg",
-        "stages": []
+    "sourceUrl": "",
+    "description": "Французская селекция, названная в честь знаменитого десерта. Куст около 2 м с прямостоячими побегами и зубчатыми листьями. Пирамидальные соцветия — молочно-белые в начале, малиновые к финалу, но верхушка всегда остаётся белой. Этот контраст белого и малинового — фирменный знак сорта. Цветёт с июля до сентября."
+  },
+  {
+    "id": "annabelle",
+    "slug": "annabelle",
+    "name": "Анабель",
+    "nameRu": "Анабель",
+    "latinName": "Hydrangea arborescens 'Annabelle'",
+    "type": "arborescens",
+    "typeRu": "Древовидная",
+    "size": "M",
+    "heightCm": [
+      100,
+      150
+    ],
+    "widthCm": [
+      150,
+      200
+    ],
+    "light": "partial_shade",
+    "lightRu": "Полутень / тень",
+    "watering": "moderate_high",
+    "wateringRu": "Умеренный — обильный",
+    "winterHardiness": 3,
+    "winterHardinessRu": "Зона 3 — очень зимостойкая",
+    "primorye": "good",
+    "primoryeNote": "Зимует хорошо, но побеги могут подмерзать — цветёт на побегах текущего года, поэтому это не проблема",
+    "bloomStart": "Июль",
+    "bloomEnd": "Сентябрь",
+    "bloomDescription": "Огромные шаровидные белые соцветия — до 30 см в диаметре",
+    "colorStages": [
+      {
+        "stage": "Начало",
+        "color": "светло-зелёный"
       },
-      "sourceUrl": "https://www.provenwinners.com/plants/hydrangea/annabelle-hydrangea-arborescens"
+      {
+        "stage": "Середина",
+        "color": "белый"
+      },
+      {
+        "stage": "Осень",
+        "color": "зеленовато-бежевый"
+      }
+    ],
+    "inflorescenceType": "ball",
+    "inflorescenceTypeRu": "Шар",
+    "shortDescription": "Классическая древовидная гортензия. Огромные белые шары соцветий. Цветёт даже после обмерзания побегов.",
+    "features": [
+      "Соцветия-шары до 30 см — настоящее зрелище",
+      "Цветёт на побегах текущего года — надёжна после морозов",
+      "Переносит больше тени чем метельчатые",
+      "Зона 3 — исключительная зимостойкость",
+      "Куст шире высоты — учитывайте место при посадке"
+    ],
+    "forWhom": [
+      "Тенистый сад",
+      "Большой сад",
+      "Начинающий садовод"
+    ],
+    "soil": "Слабокислая, богатая, хорошо удерживающая влагу",
+    "nameTranslation": "Женское имя Аннабель",
+    "images": {
+      "bush": "images/hydrangea/annabelle_bush.jpg",
+      "flower": "images/hydrangea/annabelle_flower.jpg",
+      "stages": []
     },
-    {
-      "id": "endless-summer",
-      "slug": "endless-summer",
-      "name": "Вечное лето",
-      "nameRu": "Вечное лето",
-      "latinName": "Hydrangea macrophylla 'Bailmer' (Endless Summer)",
-      "type": "macrophylla",
-      "typeRu": "Крупнолистная",
-      "size": "M",
-      "heightCm": [90, 150],
-      "widthCm": [90, 150],
-      "light": "partial_shade",
-      "lightRu": "Полутень",
-      "watering": "high",
-      "wateringRu": "Обильный",
-      "winterHardiness": 5,
-      "winterHardinessRu": "Зона 5 — требует укрытия в Приморье",
-      "primorye": "risky",
-      "primoryeNote": "⚠️ Рискованный выбор для Приморья. Требует надёжного укрытия на зиму. Цветёт повторно, но побеги прошлого года часто вымерзают. Рекомендуем метельчатые.",
-      "bloomStart": "Июнь",
-      "bloomEnd": "Октябрь",
-      "bloomDescription": "Ремонтантная — цветёт на побегах прошлого И текущего года",
-      "colorStages": [
-        { "stage": "На кислых почвах", "color": "голубой / синий" },
-        { "stage": "На нейтральных почвах", "color": "розовый / сиреневый" }
-      ],
-      "inflorescenceType": "ball_macrophylla",
-      "inflorescenceTypeRu": "Шаровидное / плоское соцветие",
-      "shortDescription": "Первая ремонтантная крупнолистная гортензия. Цвет зависит от pH почвы. В Приморье — рискованный выбор, нужно укрытие.",
-      "features": [
-        "Ремонтантная — цветёт на побегах прошлого и текущего года",
-        "Цвет меняется от голубого до розового в зависимости от pH почвы",
-        "Требует стабильного укрытия в зонах с морозами ниже -20°C",
-        "При вымерзании побегов прошлого года цветение снижается",
-        "Нужен более обильный полив, чем метельчатым"
-      ],
-      "forWhom": ["Опытный садовод", "Защищённые участки", "Регионы с мягкими зимами"],
-      "soil": "Кислая для голубого цвета / нейтральная для розового, богатая, влагоёмкая",
-      "nameTranslation": "Endless Summer — Бесконечное лето, намёк на длинное повторное цветение",
-      "images": {
-        "bush": "images/hydrangea/endless-summer_bush.jpg",
-        "flower": "images/hydrangea/endless-summer_flower.jpg",
-        "stages": []
+    "sourceUrl": "https://www.provenwinners.com/plants/hydrangea/annabelle-hydrangea-arborescens",
+    "description": "Имя говорит само за себя — прекрасная Анна. Классическая древовидная гортензия с огромными шаровидными соцветиями до 30 см — настоящие снежные шары. Широкий раскидистый куст 100–150 см цветёт с июля до сентября. Главное преимущество: цветёт на побегах текущего года — даже после суровой зимы обязательно зацветёт снова."
+  },
+  {
+    "id": "endless-summer",
+    "slug": "endless-summer",
+    "name": "Вечное лето",
+    "nameRu": "Вечное лето",
+    "latinName": "Hydrangea macrophylla 'Bailmer' (Endless Summer)",
+    "type": "macrophylla",
+    "typeRu": "Крупнолистная",
+    "size": "M",
+    "heightCm": [
+      90,
+      150
+    ],
+    "widthCm": [
+      90,
+      150
+    ],
+    "light": "partial_shade",
+    "lightRu": "Полутень",
+    "watering": "high",
+    "wateringRu": "Обильный",
+    "winterHardiness": 5,
+    "winterHardinessRu": "Зона 5 — требует укрытия в Приморье",
+    "primorye": "risky",
+    "primoryeNote": "⚠️ Рискованный выбор для Приморья. Требует надёжного укрытия на зиму. Цветёт повторно, но побеги прошлого года часто вымерзают. Рекомендуем метельчатые.",
+    "bloomStart": "Июнь",
+    "bloomEnd": "Октябрь",
+    "bloomDescription": "Ремонтантная — цветёт на побегах прошлого И текущего года",
+    "colorStages": [
+      {
+        "stage": "На кислых почвах",
+        "color": "голубой / синий"
       },
-      "sourceUrl": "https://www.endlesssummerflorist.com"
-    }
-  ]
+      {
+        "stage": "На нейтральных почвах",
+        "color": "розовый / сиреневый"
+      }
+    ],
+    "inflorescenceType": "ball_macrophylla",
+    "inflorescenceTypeRu": "Шаровидное / плоское соцветие",
+    "shortDescription": "Первая ремонтантная крупнолистная гортензия. Цвет зависит от pH почвы. В Приморье — рискованный выбор, нужно укрытие.",
+    "features": [
+      "Ремонтантная — цветёт на побегах прошлого и текущего года",
+      "Цвет зависит от pH почвы — голубой или розовый",
+      "Цветёт с июня до октября — самое долгое цветение",
+      "Требует укрытия при морозах ниже -20°C",
+      "Нужен более обильный полив чем метельчатым"
+    ],
+    "forWhom": [
+      "Опытный садовод",
+      "Защищённые участки",
+      "Мягкий климат"
+    ],
+    "soil": "Кислая для голубого цвета / нейтральная для розового, богатая, влагоёмкая",
+    "nameTranslation": "Endless Summer — Бесконечное лето, намёк на длинное повторное цветение",
+    "images": {
+      "bush": "images/hydrangea/endless-summer_bush.jpg",
+      "flower": "images/hydrangea/endless-summer_flower.jpg",
+      "stages": []
+    },
+    "sourceUrl": "https://www.endlesssummerflorist.com",
+    "description": "Первая в мире ремонтантная крупнолистная гортензия — цветёт и на старых и на новых побегах. Уникальная особенность: цвет соцветий меняется в зависимости от pH почвы — на кислой голубой, на нейтральной розовый. Важно для Приморья: требует надёжного укрытия на зиму. Для тех кто готов уделить ей особое внимание."
+  }
+]
