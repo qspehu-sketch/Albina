@@ -103,17 +103,39 @@
       gap: 24px;
     }
     .header-logo { flex-shrink: 0; }
-    .logo-title {
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .logo-icon {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+    }
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+    .logo-top {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--cream-dim);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .logo-main {
       font-family: "Cormorant Garamond", serif;
       font-weight: 600;
       font-size: 28px;
       color: var(--cream);
       letter-spacing: 0.02em;
-      line-height: 1;
       white-space: nowrap;
-      text-decoration: none;
     }
-    .logo-title em {
+    .logo-main em {
       font-style: italic;
       font-weight: 400;
       color: var(--gold-light);
@@ -359,7 +381,19 @@
     <div class="header-gold-line"></div>
     <div class="header-inner">
       <div class="header-logo">
-        <a href="index.html" class="logo-title">Мои <em>12</em> соток</a>
+        <a href="index.html" class="logo-link">
+          <svg class="logo-icon" viewBox="0 0 64 64" fill="none">
+            <path d="M32 8c-6 0-14 5-14 14 0 6 3 10 7 12.5V38h14v-3.5c4-2.5 7-6.5 7-12.5 0-9-8-14-14-14z" stroke="var(--cream-dim)" stroke-width="1.2" fill="none" opacity="0.7"/>
+            <line x1="32" y1="38" x2="32" y2="52" stroke="var(--cream-dim)" stroke-width="1.5" opacity="0.6"/>
+            <path d="M25 52h14" stroke="var(--cream-dim)" stroke-width="1.2" opacity="0.5"/>
+            <path d="M27 48c-3 1-6 3-7 5" stroke="var(--cream-dim)" stroke-width="0.8" opacity="0.35"/>
+            <path d="M37 48c3 1 6 3 7 5" stroke="var(--cream-dim)" stroke-width="0.8" opacity="0.35"/>
+            <path d="M10 6a40 40 0 0 1 44 0" stroke="var(--gold-muted)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text">
+            <span class="logo-main">Мои <em>12</em> соток</span>
+          </span>
+        </a>
       </div>
 
       <nav class="header-nav" aria-label="Категории каталога">
@@ -422,21 +456,21 @@
 
 <script>
 const HYDRANGEAS = [
-  { id:"little-spooky", name:"Little Spooky", nameRu:"Литтл Спуки", latinName:"Hydrangea paniculata 'Little Spooky'", type:"paniculata", typeRu:"Метельчатая", size:"S", heightCm:[40,50], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"excellent", primoryeNote:"Отлично подходит для Приморья — зимует без укрытия" },
-  { id:"touch-of-pink", name:"Touch of Pink", nameRu:"Тач оф Пинк", latinName:"Hydrangea paniculata 'Touch of Pink'", type:"paniculata", typeRu:"Метельчатая", size:"S", heightCm:[70,90], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"excellent", primoryeNote:"Надёжно зимует в Приморье" },
+  { id:"annabelle", name:"Анабель", nameRu:"Анабель", latinName:"Hydrangea arborescens 'Annabelle'", type:"arborescens", typeRu:"Древовидная", size:"M", heightCm:[100,150], light:"partial_shade", watering:"moderate_high", winterHardiness:3, primorye:"good", primoryeNote:"Зимует хорошо, цветёт на побегах текущего года", coverFile:"anabelle_1.png" },
   { id:"bobo", name:"Bobo", nameRu:"Бобо", latinName:"Hydrangea paniculata 'Bobo'", type:"paniculata", typeRu:"Метельчатая", size:"S", heightCm:[60,75], light:"sun_partial", watering:"moderate", winterHardiness:3, primorye:"excellent", primoryeNote:"Один из лучших для Приморья — зона 3" },
-  { id:"little-blossom", name:"Little Blossom", nameRu:"Литтл Блоссом", latinName:"Hydrangea paniculata 'Little Blossom'", type:"paniculata", typeRu:"Метельчатая", size:"S", heightCm:[60,80], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"excellent", primoryeNote:"Надёжна в условиях Приморья" },
   { id:"bombshell", name:"Bombshell", nameRu:"Бомбшелл", latinName:"Hydrangea paniculata 'Bombshell'", type:"paniculata", typeRu:"Метельчатая", size:"S", heightCm:[60,90], light:"sun_partial", watering:"moderate", winterHardiness:3, primorye:"excellent", primoryeNote:"Отличный выбор для Приморья — зона 3" },
-  { id:"cotton-cream", name:"Cotton Cream", nameRu:"Коттон Крим", latinName:"Hydrangea paniculata 'Cotton Cream'", type:"paniculata", typeRu:"Метельчатая", size:"M", heightCm:[100,150], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"good", primoryeNote:"Хорошо подходит для Приморья" },
-  { id:"samarskaya-lidiya", name:"Самарская Лидия", nameRu:"Самарская Лидия", latinName:"Hydrangea paniculata 'Samarskaya Lidiya'", type:"paniculata", typeRu:"Метельчатая", size:"M", heightCm:[100,130], light:"sun_partial", watering:"moderate", winterHardiness:3, primorye:"excellent", primoryeNote:"Российская селекция — выведена для сурового климата" },
-  { id:"strawberry-blossom", name:"Strawberry Blossom", nameRu:"Строберри Блоссом", latinName:"Hydrangea paniculata 'Strawberry Blossom'", type:"paniculata", typeRu:"Метельчатая", size:"M", heightCm:[100,150], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"excellent", primoryeNote:"Хорошо зимует в Приморье" },
   { id:"vanille-fraise", name:"Vanille Fraise", nameRu:"Ваниль Фрез", latinName:"Hydrangea paniculata 'Vanille Fraise'", type:"paniculata", typeRu:"Метельчатая", size:"L", heightCm:[150,200], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"excellent", primoryeNote:"Классика для Приморья — зимостойкая и эффектная" },
+  { id:"endless-summer", name:"Endless Summer", nameRu:"Вечное Лето", latinName:"Hydrangea macrophylla 'Bailmer'", type:"macrophylla", typeRu:"Крупнолистная", size:"M", heightCm:[90,150], light:"partial_shade", watering:"high", winterHardiness:5, primorye:"risky", primoryeNote:"Требует надёжного укрытия зимой. Рекомендуем метельчатые сорта как более надёжный вариант для Приморья" },
+  { id:"cotton-cream", name:"Cotton Cream", nameRu:"Коттон Крим", latinName:"Hydrangea paniculata 'Cotton Cream'", type:"paniculata", typeRu:"Метельчатая", size:"M", heightCm:[100,150], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"good", primoryeNote:"Хорошо подходит для Приморья" },
   { id:"limelight", name:"Limelight", nameRu:"Лаймлайт", latinName:"Hydrangea paniculata 'Limelight'", type:"paniculata", typeRu:"Метельчатая", size:"L", heightCm:[180,240], light:"sun_partial", watering:"moderate", winterHardiness:3, primorye:"excellent", primoryeNote:"Один из лучших крупных сортов для Приморья", featured:true },
-  { id:"phantom", name:"Phantom", nameRu:"Фантом", latinName:"Hydrangea paniculata 'Phantom'", type:"paniculata", typeRu:"Метельчатая", size:"L", heightCm:[200,250], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"excellent", primoryeNote:"Надёжно зимует в Приморье" },
+  { id:"little-blossom", name:"Little Blossom", nameRu:"Литтл Блоссом", latinName:"Hydrangea paniculata 'Little Blossom'", type:"paniculata", typeRu:"Метельчатая", size:"S", heightCm:[60,80], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"excellent", primoryeNote:"Надёжна в условиях Приморья" },
+  { id:"little-spooky", name:"Little Spooky", nameRu:"Литтл Спуки", latinName:"Hydrangea paniculata 'Little Spooky'", type:"paniculata", typeRu:"Метельчатая", size:"S", heightCm:[40,50], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"excellent", primoryeNote:"Отлично подходит для Приморья — зимует без укрытия" },
   { id:"polar-bear", name:"Polar Bear", nameRu:"Полярный Медведь", latinName:"Hydrangea paniculata 'Polar Bear'", type:"paniculata", typeRu:"Метельчатая", size:"L", heightCm:[180,200], light:"sun_partial", watering:"moderate", winterHardiness:3, primorye:"excellent", primoryeNote:"Одна из лучших для сурового климата Приморья" },
-  { id:"fraise-melba", name:"Fraise Melba", nameRu:"Фрез Мельба", latinName:"Hydrangea paniculata 'Fraise Melba'", type:"paniculata", typeRu:"Метельчатая", size:"L", heightCm:[180,220], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"good", primoryeNote:"Хорошо подходит для Приморья" },
-  { id:"annabelle", name:"Анабель", nameRu:"Анабель", latinName:"Hydrangea arborescens 'Annabelle'", type:"arborescens", typeRu:"Древовидная", size:"M", heightCm:[100,150], light:"partial_shade", watering:"moderate_high", winterHardiness:3, primorye:"good", primoryeNote:"Зимует хорошо, цветёт на побегах текущего года" },
-  { id:"endless-summer", name:"Endless Summer", nameRu:"Вечное Лето", latinName:"Hydrangea macrophylla 'Bailmer'", type:"macrophylla", typeRu:"Крупнолистная", size:"M", heightCm:[90,150], light:"partial_shade", watering:"high", winterHardiness:5, primorye:"risky", primoryeNote:"Требует надёжного укрытия зимой. Рекомендуем метельчатые сорта как более надёжный вариант для Приморья" }
+  { id:"samarskaya-lidiya", name:"Самарская Лидия", nameRu:"Самарская Лидия", latinName:"Hydrangea paniculata 'Samarskaya Lidiya'", type:"paniculata", typeRu:"Метельчатая", size:"M", heightCm:[100,130], light:"sun_partial", watering:"moderate", winterHardiness:3, primorye:"excellent", primoryeNote:"Российская селекция — выведена для сурового климата" },
+  { id:"strawberry-blossom", name:"Strawberry Blossom", nameRu:"Стробери Блоссом", latinName:"Hydrangea paniculata 'Strawberry Blossom'", type:"paniculata", typeRu:"Метельчатая", size:"M", heightCm:[100,150], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"excellent", primoryeNote:"Хорошо зимует в Приморье" },
+  { id:"touch-of-pink", name:"Touch of Pink", nameRu:"Тач оф Пинк", latinName:"Hydrangea paniculata 'Touch of Pink'", type:"paniculata", typeRu:"Метельчатая", size:"S", heightCm:[70,90], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"excellent", primoryeNote:"Надёжно зимует в Приморье" },
+  { id:"phantom", name:"Phantom", nameRu:"Фантом", latinName:"Hydrangea paniculata 'Phantom'", type:"paniculata", typeRu:"Метельчатая", size:"L", heightCm:[200,250], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"excellent", primoryeNote:"Надёжно зимует в Приморье" },
+  { id:"fraise-melba", name:"Fraise Melba", nameRu:"Фрез Мельба", latinName:"Hydrangea paniculata 'Fraise Melba'", type:"paniculata", typeRu:"Метельчатая", size:"L", heightCm:[180,220], light:"sun_partial", watering:"moderate", winterHardiness:4, primorye:"good", primoryeNote:"Хорошо подходит для Приморья" }
 ];
 
 const ICONS = {
@@ -495,7 +529,7 @@ function renderCards(data) {
         <div class="card__media">
           ${badge}
           <span class="badge--size">${sizeLbl}</span>
-          <img src="imageshydrangea/${h.id}_1.png" alt="${h.name}"
+          <img src="imageshydrangea/${h.coverFile || h.id+'_1.png'}" alt="${h.name}"
             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <div class="card__media-placeholder">
             <svg viewBox="0 0 24 24"><path d="M12 3c0 0-7 4.5-7 9.5a7 7 0 0 0 14 0C19 7.5 12 3 12 3z"/><path d="M8 14c1-2 2.5-3.5 4-4"/></svg>

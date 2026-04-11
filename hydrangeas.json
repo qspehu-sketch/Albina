@@ -1017,7 +1017,13 @@
     },
     "sourceUrl": "https://www.provenwinners.com/plants/hydrangea/annabelle-hydrangea-arborescens",
     "description": "Имя говорит само за себя — прекрасная Анна. Классическая древовидная гортензия с огромными шаровидными соцветиями до 30 см — настоящие снежные шары. Широкий раскидистый куст 100–150 см цветёт с июля до сентября. Главное преимущество: цветёт на побегах текущего года — даже после суровой зимы обязательно зацветёт снова.",
-    "galleryImages": []
+    "galleryImages": [
+      "imageshydrangea/anabelle_1.png",
+      "imageshydrangea/anabelle_3.png",
+      "imageshydrangea/anabelle_4.png",
+      "imageshydrangea/anabelle_5.png"
+    ],
+    "coverImage": "imageshydrangea/anabelle_1.png"
   },
   {
     "id": "endless-summer",
